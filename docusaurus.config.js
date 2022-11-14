@@ -109,27 +109,31 @@ const config = {
         },
         items: [
           {
-            label: "Providers",
-            to: "/providers",
-          },
-          {
-            label: "Wallets",
-            to: "/wallets",
-          },
-          {
-            label: "Launch",
-            to: "/launch",
-          },
-          {
-            to: "blog",
-            position: "left",
-            label: "Blog",
-          },
-          {
-            type: "doc",
-            docId: "intro",
-            position: "left",
-            label: "Docs",
+            label: 'Links',
+            position: 'left',
+            type: 'custom-customNavbarItem',
+            items: [
+              {
+                label: "Providers",
+                to: "/providers",
+              },
+              {
+                label: "Wallets",
+                to: "/wallets",
+              },
+              {
+                label: "Launch",
+                to: "/launch",
+              },
+              {
+                to: "blog",
+                label: "Blog",
+              },
+              {
+                to: "/docs",
+                label: "Docs",
+              }
+            ]
           },
           {
             href: "https://github.com/valkyrie-fnd",
