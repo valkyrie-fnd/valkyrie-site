@@ -1,32 +1,19 @@
-import React,{useMemo} from 'react';
+import React from 'react';
 import Layout from '@theme-original/Layout';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { useColorMode } from '@docusaurus/theme-common';
 const lightTheme = createTheme({
   palette: {
     primary: {
-      main: '#2e8555',
-      light: '#33925d',
-      dark: '#29784c',
+      main: '#4DDD89',
+    },
+    secondary: {
+      main: '#9AFFC4',
     },
   },
 });
-const darkTheme = createTheme({
-  palette: {
-    mode: 'dark',
-    primary: {
-      main: '#25c2a0',
-      light: '#29d5b0',
-      dark: '#21af90',
-    },
-  },
-});
+
 function MUIThemeWrapper(props) {
-  const { colorMode } = useColorMode();
-  const theme = useMemo(
-    () => colorMode === 'dark' ? darkTheme : lightTheme,
-    [colorMode]
-  );
+  const theme = lightTheme;
   return (
     <ThemeProvider theme={theme}>
       {props.children}
@@ -35,10 +22,10 @@ function MUIThemeWrapper(props) {
 }
 export default function LayoutWrapper(props) {
   return (
-      <Layout>
-        <MUIThemeWrapper>
-          {props.children}
-        </MUIThemeWrapper>
-      </Layout>
+    <Layout>
+      <MUIThemeWrapper>
+        {props.children}
+      </MUIThemeWrapper>
+    </Layout>
   );
 }

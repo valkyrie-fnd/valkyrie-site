@@ -55,34 +55,67 @@ const config = {
         excludeDir: ["internal"],
       },
     ],
+    // Docs plugin for wallet api doc
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: "walletApi",
+        path: "api/wallet",
+        routeBasePath: "wallet",
+        sidebarPath: require.resolve("./sidebars.js"),
+        docLayoutComponent: "@theme/DocPage",
+        docItemComponent: "@theme/ApiItem" // Derived from docusaurus-theme-openapi-docs
+      },
+    ],
+    // Docs plugin for launch api doc
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: "launchApi",
+        path: "api/launch",
+        routeBasePath: "launch",
+        sidebarPath: require.resolve("./sidebars.js"),
+        docLayoutComponent: "@theme/DocPage",
+        docItemComponent: "@theme/ApiItem" // Derived from docusaurus-theme-openapi-docs
+      },
+    ],
+    [
+      "docusaurus-plugin-openapi-docs",
+      {
+        id: "walletApiDocs",
+        docsPluginId: "walletApi",
+        config: {
+          wallet: {
+            specPath: "../valkyrie/pam/pam_api.yml",
+            outputDir: "api/wallet",
+          },
+        },
+      },
+    ],
+    [
+      "docusaurus-plugin-openapi-docs",
+      {
+        id: "launchApiDocs",
+        docsPluginId: "launchApi",
+        config: {
+          launch: {
+            specPath: "../valkyrie/provider/provider_api.yml",
+            outputDir: "api/launch",
+          },
+        },
+      },
+    ],
     ...getProviderPagesPlugin(["internal"]),
   ],
   presets: [
-    [
-      // redoc plugin for displaying the OAPI specs
-      "redocusaurus",
-      {
-        specs: [
-          {
-            spec: "../valkyrie/pam/pam_api.yml",
-            route: "/wallets",
-          },
-          {
-            spec: "../valkyrie/provider/provider_api.yml",
-            route: "/launch",
-          },
-        ],
-      },
-    ],
     [
       "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          routeBasePath: "/docs",
+          path: "docs",
+          routeBasePath: "docs",
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
             "https://github.com/valkyrie-fnd/valkyrie-site",
         },
@@ -109,31 +142,34 @@ const config = {
         },
         items: [
           {
-            label: 'Links',
-            position: 'left',
-            type: 'custom-customNavbarItem',
-            items: [
-              {
-                label: "Providers",
-                to: "/providers",
-              },
-              {
-                label: "Wallets",
-                to: "/wallets",
-              },
-              {
-                label: "Launch",
-                to: "/launch",
-              },
-              {
-                to: "blog",
-                label: "Blog",
-              },
-              {
-                to: "/docs",
-                label: "Docs",
-              }
-            ]
+            label: "Providers",
+            to: "/providers",
+            position: "right",
+          },
+          {
+            type: "doc",
+            docId: "valkyrie-pam-api",
+            position: "right",
+            label: "Wallets",
+            docsPluginId: "walletApi",
+          },
+          {
+            label: "Launch",
+            type: "doc",
+            docId: "valkyrie-provider-endpoints",
+            position: "right",
+            docsPluginId: "launchApi",
+          },
+          {
+            to: "blog",
+            label: "Blog",
+            position: "right",
+          },
+          {
+            type: "doc",
+            docId: "intro",
+            position: "right",
+            label: "Docs",
           },
           {
             href: "https://github.com/valkyrie-fnd",
@@ -143,7 +179,6 @@ const config = {
         ],
       },
       footer: {
-        style: "dark",
         links: [
           {
             items: [
@@ -176,11 +211,11 @@ const config = {
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Valkyrie, Inc. Built with Docusaurus.`,
       },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+      colorMode: {
+        disableSwitch: true,
       },
     }),
+  themes: ["docusaurus-theme-openapi-docs"],
 };
 
 module.exports = config;
