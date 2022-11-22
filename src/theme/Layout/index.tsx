@@ -43,7 +43,7 @@ const lightTheme = createTheme({
 function MUIThemeWrapper(props) {
   const theme = lightTheme;
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme} >
       {props.children}
     </ThemeProvider>
   )
