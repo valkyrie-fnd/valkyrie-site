@@ -142,7 +142,7 @@ const config = {
         },
         items: [
           {
-            label: "Providers",
+            label: "PROVIDERS",
             to: "/providers",
             position: "right",
           },
@@ -150,11 +150,11 @@ const config = {
             type: "doc",
             docId: "valkyrie-pam-api",
             position: "right",
-            label: "Wallets",
+            label: "WALLETS",
             docsPluginId: "walletApi",
           },
           {
-            label: "Launch",
+            label: "LAUNCH",
             type: "doc",
             docId: "valkyrie-provider-endpoints",
             position: "right",
@@ -162,18 +162,18 @@ const config = {
           },
           {
             to: "blog",
-            label: "Blog",
+            label: "BLOG",
             position: "right",
           },
           {
             type: "doc",
             docId: "intro",
             position: "right",
-            label: "Docs",
+            label: "DOCS",
           },
           {
             href: "https://github.com/valkyrie-fnd",
-            label: "GitHub",
+            label: "GITHUB",
             position: "right",
           },
         ],

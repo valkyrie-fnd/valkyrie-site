@@ -45,12 +45,15 @@
 
 /* You can override the default Infima variables here. */
 :root {
+  /* Text and color*/
   --ifm-color-primary: #4DDD89;
   --ifm-color-secondary: #9AFFC4;
   --ifm-background-color: #19191D;
   --ifm-heading-color: white;
   --ifm-color-base: #868280;
   --ifm-color-content: #868280;
+  /* Navbar*/
+  --ifm-navbar-item-padding-horizontal: 1rem;
   --ifm-footer-background-color: #25252C;
   --ifm-navbar-background-color: #19191D;
   --navbar-sidebar-background-color: #19191D;
@@ -79,6 +82,10 @@
 
 .navbar-sidebar {
   background-color: var(--navbar-sidebar-background-color);
+}
+
+.menu {
+  text-transform: uppercase;
 }
 
 .section {
