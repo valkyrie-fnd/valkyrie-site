@@ -52,7 +52,14 @@
   --ifm-color-base: #868280;
   --ifm-color-content: #868280;
   --ifm-footer-background-color: #25252C;
-  --ifm-navbar-background-color: transparent;
+  --ifm-navbar-background-color: #19191D;
+  --navbar-sidebar-background-color: #19191D;
+  --border-color: rgba(255, 255, 255, 0.2);
+  --ifm-navbar-shadow: 0 1px 2px 0 var(--border-color);
+  --ifm-navbar-link-color: white;
+  --ifm-toc-border-color: transparent;
+  --ifm-menu-color: white;
+  /*rgba(255, 255, 255, 0.2);*/
   /*Dark background #19191D*/
   /* light background  --ifm-background-color: #25252C; */
   /*tex gray: #868280*/
@@ -64,6 +71,14 @@
 
 .theme-doc-sidebar-container {
   background-color: var(--ifm-footer-background-color);
+}
+
+.main-page .navbar {
+  background-color: transparent;
+}
+
+.navbar-sidebar {
+  background-color: var(--navbar-sidebar-background-color);
 }
 
 .section {

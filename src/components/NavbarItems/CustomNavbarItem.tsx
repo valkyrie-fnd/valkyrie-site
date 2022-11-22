@@ -6,7 +6,6 @@ import type {
 } from '@theme/NavbarItem/DefaultNavbarItem';
 import NavbarNavLink from '@theme/NavbarItem/NavbarNavLink';
 import styles from './styles.module.css'
-import { stepLabelClasses } from '@mui/material';
 type NavbarItem = {
   to: string
   label: string
@@ -30,7 +29,6 @@ function NavbarItemDesktop({
   items,
   ...props
 }: PropsDesktop) {
-  console.log("NavBarItemDesktop")
   return (
     <div className={`navbar__items ${styles.navbarItemsCustom}`}>
       {items.map(i => (
@@ -55,7 +53,6 @@ function NavbarItemMobile({
   items,
   ...props
 }: PropsMobile) {
-  console.log("NavBarItemMobile")
   return (<>
     {
       items.map(i => (
@@ -63,7 +60,7 @@ function NavbarItemMobile({
           <NavbarNavLink className={clsx('menu__link', className)} {...i} {...props} />
         </li>
       ))}
-    </>
+  </>
   );
 }
 
@@ -73,7 +70,6 @@ export default function ({
   ...props
 }: WrapperProps): JSX.Element {
   const Comp = mobile ? NavbarItemMobile : NavbarItemDesktop;
-  console.log("NavBarItemWrapper")
   return (
     <Comp
       {...props}

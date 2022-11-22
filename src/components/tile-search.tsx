@@ -73,9 +73,9 @@ export default function TileSearch({ label, items }: TileSearchProps) {
   return (<>
     <Grid container direction='row' justifyContent='center' alignItems='center' className='padding-bottom--lg'>
       <TextField
-        className=''
         label={`${label}`}
-        onChange={textChange} />
+        onChange={textChange}
+      />
     </Grid>
     {
       filteredItems.length > 0 ?

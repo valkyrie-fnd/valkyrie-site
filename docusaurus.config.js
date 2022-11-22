@@ -64,7 +64,7 @@ const config = {
         routeBasePath: "wallet",
         sidebarPath: require.resolve("./sidebars.js"),
         docLayoutComponent: "@theme/DocPage",
-        docItemComponent: "@theme/ApiItem" // Derived from docusaurus-theme-openapi-docs
+        docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi-docs
       },
     ],
     // Docs plugin for launch api doc
@@ -76,7 +76,7 @@ const config = {
         routeBasePath: "launch",
         sidebarPath: require.resolve("./sidebars.js"),
         docLayoutComponent: "@theme/DocPage",
-        docItemComponent: "@theme/ApiItem" // Derived from docusaurus-theme-openapi-docs
+        docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi-docs
       },
     ],
     [
@@ -179,37 +179,37 @@ const config = {
         ],
       },
       footer: {
-        links: [
-          {
-            items: [
-              {
-                label: "Home",
-                to: "/",
-              },
-              {
-                label: "Providers",
-                to: "/providers",
-              },
-              {
-                label: "Wallets",
-                to: "/wallets",
-              },
-              {
-                label: "Launch",
-                to: "/launch",
-              },
-              {
-                label: "Blog",
-                to: "/blog",
-              },
-              {
-                label: "Docs",
-                to: "/docs",
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} Valkyrie, Inc. Built with Docusaurus.`,
+        // links: [
+        //   {
+        //     items: [
+        //       {
+        //         label: "Home",
+        //         to: "/",
+        //       },
+        //       {
+        //         label: "Providers",
+        //         to: "/providers",
+        //       },
+        //       {
+        //         label: "Wallets",
+        //         to: "/wallets",
+        //       },
+        //       {
+        //         label: "Launch",
+        //         to: "/launch",
+        //       },
+        //       {
+        //         label: "Blog",
+        //         to: "/blog",
+        //       },
+        //       {
+        //         label: "Docs",
+        //         to: "/docs",
+        //       },
+        //     ],
+        //   },
+        // ],
+        copyright: `Copyright © ${new Date().getFullYear()} Valkyrie Foundation. Built with Docusaurus.`,
       },
       colorMode: {
         disableSwitch: true,

@@ -5,9 +5,11 @@
     grid-row-gap: 2rem;
     justify-content: center;
 }
+
 .tileSearchItem {
     justify-self: center;
 }
+
 .tileSearchItem img {
     background-color: #2b3137;
 }

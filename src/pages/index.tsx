@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Layout from '@theme/Layout';
 import styles from './index.module.css';
 
-export default function MainPage() {
+export default function MainPage(props) {
+  useEffect(() => {
+    // Used to make transparent on this page
+    document.body.classList.add('main-page');
+    return () => { document.body.classList.remove('main-page'); }
+  }, []);
   const features = [
     {
       title: "What's this?",
