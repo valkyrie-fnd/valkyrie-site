@@ -1,7 +1,7 @@
 import React from 'react';
-import Layout from '@theme-original/Layout';
+import Root from '@theme-original/Root'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-const lightTheme = createTheme({
+const theme = createTheme({
   palette: {
     primary: {
       main: '#4DDD89',
@@ -41,19 +41,17 @@ const lightTheme = createTheme({
 });
 
 function MUIThemeWrapper(props) {
-  const theme = lightTheme;
   return (
     <ThemeProvider theme={theme} >
       {props.children}
     </ThemeProvider>
   )
 }
-export default function LayoutWrapper(props) {
-  return (
-    <Layout>
-      <MUIThemeWrapper>
-        {props.children}
-      </MUIThemeWrapper>
-    </Layout>
-  );
+
+export default function RootWrapper(props) {
+  return (<Root>
+    <MUIThemeWrapper>
+      {props.children}
+    </MUIThemeWrapper>
+  </Root>)
 }
