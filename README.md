@@ -24,6 +24,11 @@ $ yarn build
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
+### Generate docs
+```
+yarn docusaurus gen-api-docs all
+```
+This command generates md documentation for openapi specifications.
 ### Deployment
 
 Using SSH:

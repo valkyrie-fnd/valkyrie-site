@@ -55,53 +55,20 @@ const config = {
         excludeDir: ["internal"],
       },
     ],
-    // Docs plugin for wallet api doc
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: "walletApi",
-        path: "api/wallet",
-        routeBasePath: "wallet",
-        sidebarPath: require.resolve("./sidebars.js"),
-        docLayoutComponent: "@theme/DocPage",
-        docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi-docs
-      },
-    ],
-    // Docs plugin for launch api doc
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: "launchApi",
-        path: "api/launch",
-        routeBasePath: "launch",
-        sidebarPath: require.resolve("./sidebars.js"),
-        docLayoutComponent: "@theme/DocPage",
-        docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi-docs
-      },
-    ],
     [
       "docusaurus-plugin-openapi-docs",
       {
-        id: "walletApiDocs",
-        docsPluginId: "walletApi",
+        id: "apiDocs",
+        docsPluginId: "classic",
         config: {
           wallet: {
             specPath: "../valkyrie/pam/pam_api.yml",
-            outputDir: "api/wallet",
+            outputDir: "docs/wallet",
           },
-        },
-      },
-    ],
-    [
-      "docusaurus-plugin-openapi-docs",
-      {
-        id: "launchApiDocs",
-        docsPluginId: "launchApi",
-        config: {
           launch: {
             specPath: "../valkyrie/provider/provider_api.yml",
-            outputDir: "api/launch",
-          },
+            outputDir: "docs/gamelaunch",
+          }
         },
       },
     ],
@@ -118,6 +85,8 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl:
             "https://github.com/valkyrie-fnd/valkyrie-site",
+          docLayoutComponent: "@theme/DocPage",
+          docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi-docs
         },
         blog: {
           blogTitle: "Valkyrie blog!",
@@ -148,28 +117,14 @@ const config = {
           },
           {
             type: "doc",
-            docId: "valkyrie-pam-api",
+            docId: "intro",
             position: "right",
-            label: "WALLETS",
-            docsPluginId: "walletApi",
-          },
-          {
-            label: "LAUNCH",
-            type: "doc",
-            docId: "valkyrie-provider-endpoints",
-            position: "right",
-            docsPluginId: "launchApi",
+            label: "DOCS",
           },
           {
             to: "blog",
             label: "BLOG",
             position: "right",
-          },
-          {
-            type: "doc",
-            docId: "intro",
-            position: "right",
-            label: "DOCS",
           },
           {
             href: "https://github.com/valkyrie-fnd",
@@ -179,36 +134,6 @@ const config = {
         ],
       },
       footer: {
-        // links: [
-        //   {
-        //     items: [
-        //       {
-        //         label: "Home",
-        //         to: "/",
-        //       },
-        //       {
-        //         label: "Providers",
-        //         to: "/providers",
-        //       },
-        //       {
-        //         label: "Wallets",
-        //         to: "/wallets",
-        //       },
-        //       {
-        //         label: "Launch",
-        //         to: "/launch",
-        //       },
-        //       {
-        //         label: "Blog",
-        //         to: "/blog",
-        //       },
-        //       {
-        //         label: "Docs",
-        //         to: "/docs",
-        //       },
-        //     ],
-        //   },
-        // ],
         copyright: `Copyright © ${new Date().getFullYear()} Valkyrie Foundation. Built with Docusaurus.`,
       },
       colorMode: {
