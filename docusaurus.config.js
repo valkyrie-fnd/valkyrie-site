@@ -104,12 +104,16 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "Valkyrie",
         logo: {
           alt: "valkyrie logo",
-          src: "img/down.svg",
+          src: "img/Valkyrie-green.svg",
         },
         items: [
+          {
+            label: "ABOUT US",
+            to: "/about-us",
+            position: "right",
+          },
           {
             label: "PROVIDERS",
             to: "/providers",
@@ -131,6 +135,11 @@ const config = {
             label: "GITHUB",
             position: "right",
           },
+          {
+            type: "html",
+            position: "right",
+            value: '<img style="margin-left: 60px" width="28" src="/img/Valkyrie-logo-green.svg"/>'
+          }
         ],
       },
       footer: {
