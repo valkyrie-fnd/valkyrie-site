@@ -76,8 +76,19 @@
   background-color: var(--ifm-footer-background-color);
 }
 
-.main-page .navbar {
-  background-color: transparent;
+.navbar {
+  background-color: rgba(25, 25, 29, 0.1);
+  backdrop-filter: blur(20px);
+}
+
+.navbar.navbar-sidebar--show {
+  backdrop-filter: none;
+}
+
+.navbar.navbar-sidebar--show .navbar__inner {
+  padding: calc(var(--ifm-navbar-height)/2);
+  margin-top: calc(var(--ifm-navbar-padding-vertical) * -1);
+  backdrop-filter: blur(20px);
 }
 
 .navbar-sidebar {
@@ -99,4 +110,8 @@
 
 .main-wrapper>div {
   flex: 1
+}
+
+.menu-logo {
+  margin: var(--ifm-menu-link-padding-vertical) var(--ifm-menu-link-padding-horizontal);
 }

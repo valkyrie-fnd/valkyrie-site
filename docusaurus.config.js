@@ -138,7 +138,7 @@ const config = {
           {
             type: "html",
             position: "right",
-            value: '<img style="margin-left: 60px" width="28" src="/img/Valkyrie-logo-green.svg"/>'
+            value: '<img class="menu-logo" width="28" src="/img/Valkyrie-logo-green.svg"/>'
           }
         ],
       },
