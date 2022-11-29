@@ -1,0 +1,1 @@
+export { ValkButton } from './valk-button';
