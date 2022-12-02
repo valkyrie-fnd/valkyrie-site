@@ -4,9 +4,9 @@ import WalletRoundedIcon from '@mui/icons-material/WalletRounded';
 import OpenInNewRoundedIcon from '@mui/icons-material/OpenInNewRounded';
 import Layout from '@theme/Layout';
 import styles from './index.module.css';
-import { ValkLogo } from '../components/ValkLogo';
+import { ValkLogo } from '@site/src/components/ValkLogo';
+import { ValkButton } from '@site/src/components/ValkButton';
 import Link from '@docusaurus/Link';
-import { ValkButton } from '../components/ValkButton/index';
 
 export default function MainPage(props) {
   useEffect(() => {
