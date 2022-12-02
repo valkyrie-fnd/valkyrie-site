@@ -115,3 +115,11 @@
 .menu-logo {
   margin: var(--ifm-menu-link-padding-vertical) var(--ifm-menu-link-padding-horizontal);
 }
+
+.main-page {
+  background: url(/img/main-page-background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

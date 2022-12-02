@@ -4,9 +4,8 @@ import styles from './valk-button.module.css';
 import ArrowForwardRoundedIcon from '@mui/icons-material/ArrowForwardRounded';
 import Link from '@docusaurus/Link';
 
-interface ValkProps {
+interface ValkProps extends React.HtmlHTMLAttributes<HTMLButtonElement> {
   startIcon: React.ReactNode
-  children: React.ReactNode
   href?: string
 }
 interface ExtraProps {
@@ -23,7 +22,7 @@ export function ValkButton(props: ValkProps) {
   }
   return (<Button
     {...extraProps}
-    className={styles.valkButton}
+    className={`${styles.valkButton} ${props.className}`}
     startIcon={props.startIcon}
     variant="contained" >
     <div className={`${styles.buttonContent}`}>

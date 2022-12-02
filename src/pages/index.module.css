@@ -1,26 +1,57 @@
-.heroBanner {
-    height: 300px;
-    background-color: #2b3137;
-    color: white;
-    position: relative;
-    overflow: hidden;
+.mainPage {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 8rem;
+    gap: 1rem;
 }
 
-.heroBanner::before {
-    content: ' ';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: -500px;
-    width: 100%;
-    height: 1000px;
-    opacity: 0.1;
-    background-image: url('/img/dice.jpg');
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-size: cover;
+.left {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
 }
 
-.heroContent {
-    position: relative;
+.right {
+    flex-grow: 2;
+    flex-shrink: 2;
+    flex-basis: 0;
+    min-width: 248px;
+}
+
+.header {
+    font-size: 3.6em;
+    font-weight: 400;
+}
+
+.subHeader {
+    font-weight: 300;
+}
+
+
+.buttons {
+    flex-wrap: wrap;
+    display: flex;
+    gap: 1rem;
+}
+
+.button {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+@media screen and (max-width: 996px) {
+    .header {
+        font-size: 2em;
+    }
+
+    .mainPage {
+        margin-top: 1rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+        margin-right: 25%;
+    }
 }
