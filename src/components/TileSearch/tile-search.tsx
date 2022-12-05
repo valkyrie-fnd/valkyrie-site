@@ -9,6 +9,7 @@ import {
   Typography,
   CardActions,
   Button,
+  ButtonBase,
 } from '@mui/material';
 import { debounce } from 'lodash';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -34,7 +35,7 @@ declare type TileSearchItemProps = {
 function ValkCardMedia(props) {
   return (
     <div className={`${props.className ? props.className : ''} ${styles.valkCardMedia}`}>
-      <img height={props.height} src={props.src} alt={props.alt} />
+      <img src={props.src} alt={props.alt} />
     </div>
   )
 }
@@ -48,17 +49,19 @@ function TileSearchItem({ item }: TileSearchItemProps) {
     transition={{ duration: 0.3 }}
     layout>
     <Link href={item.url} className={styles.cardLink}>
-      <Card className={styles.card} raised={true}>
-        <CardContent>
-          <ValkCardMedia src={`/img/${item.cardImageUrl}`} alt={`${item.name}`} height="100" />
-          <Typography gutterBottom variant='h5' component='div'>
-            {item.name}
-          </Typography>
-          <Typography variant='body2' color='text.secondary'>
-            {item.description}
-          </Typography>
-        </CardContent>
-      </Card>
+      <ButtonBase>
+        <Card className={styles.card}>
+          <ValkCardMedia src={`/img/${item.cardImageUrl}`} alt={`${item.name}`} />
+          <CardContent>
+            <Typography gutterBottom variant='h5' component='div'>
+              {item.name}
+            </Typography>
+            <Typography variant='body1' color='text.primary'>
+              {item.description}
+            </Typography>
+          </CardContent>
+        </Card>
+      </ButtonBase>
     </Link>
   </motion.div>);
 }
