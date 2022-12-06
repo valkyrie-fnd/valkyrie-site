@@ -5,4 +5,7 @@
     "baseUrl": ".",
     "moduleResolution": "Node16"
   },
+  "exclude": [
+    "node_modules"
+  ]
 }
