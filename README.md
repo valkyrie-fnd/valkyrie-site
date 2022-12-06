@@ -26,9 +26,14 @@ This command generates static content into the `build` directory and can be serv
 
 ### Generate docs
 ```
-yarn docusaurus gen-api-docs all
+yarn gen-api-docs
 ```
-This command generates md documentation for openapi specifications.
+This command generates md documentation for openapi specifications. Requires valkyrie to be present on the system
+
+```
+yarn gen-provider-docs
+```
+This command generates md documentation from provider modules inside valkyrie. Requires valkyrie to be present on the system
 ### Deployment
 
 Using SSH:
