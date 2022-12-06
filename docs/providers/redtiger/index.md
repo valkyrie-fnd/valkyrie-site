@@ -17,7 +17,7 @@ See our wallet API (https://dev.redtigergaming.com/#!/) for details on how to in
 
 Integrate your gaming lobby and wallet system (often enough referred to as "PAM") to Valkyrie and you will be able to access all games offered by Red Tiger!
 
-You can either integrate directly to the [Valkyrie standardized gaming API](/wallets)  or implement a proprietary integration to Valkyrie. If you choose proprietary option, please contribute to the Valkyrie open code base found here (https://github.com/four-fingers/valkyrie).
+You can either integrate directly to the [Valkyrie standardized gaming API](/docs/wallet/valkyrie-pam-api)  or implement a proprietary integration to Valkyrie. If you choose proprietary option, please contribute to the Valkyrie open code base found here (https://github.com/valkyrie-fnd).
 
 ### Configuration
 

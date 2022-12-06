@@ -66,8 +66,6 @@ const config = {
           path: "docs",
           routeBasePath: "docs",
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl:
-            "https://github.com/valkyrie-fnd/valkyrie-site",
           docLayoutComponent: "@theme/DocPage",
           docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi-docs
         },
