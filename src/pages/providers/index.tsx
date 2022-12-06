@@ -6,7 +6,7 @@ import { TileSearch, TileItem } from '@site/src/components/TileSearch';
 
 
 export default function Providers() {
-  const { providers } = usePluginData('provider-data-plugin') as { providers: TileItem[] };
+  const { providers } = usePluginData('provider-data-plugin', 'provider-data-plugin') as { providers: TileItem[] };
   console.log(providers);
 
   return (
@@ -26,12 +26,6 @@ export default function Providers() {
           </div>
         </div>
       </main>
-      {/* <div className={`${styles.providers} text--center section`}>
-        <h1>Available providers</h1>
-      </div>
-      <div className='container section'>
-        <TileSearch items={providers} label="Search Provider" />
-      </div> */}
     </Layout>
   );
 }

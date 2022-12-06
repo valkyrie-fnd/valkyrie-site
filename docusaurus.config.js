@@ -1,28 +1,5 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
-const path = require('path');
-const fs = require('fs')
-
-/**
- * Add content pages from provider module docs folders. 
- * All .md and .mdx files in the provider module docs folders are used
- */
-function getProviderPagesPlugin(excludeDirs) {
-  const providerPath = path.resolve('../valkyrie/provider');
-  const providerDirs = fs.readdirSync(providerPath, { withFileTypes: true })
-    .filter(d => d.isDirectory() && !excludeDirs.includes(d.name));
-  return providerDirs.map(pd => {
-    return [
-      '@docusaurus/plugin-content-pages',
-      {
-        id: `provider-pages-${pd.name}`,
-        path: `../valkyrie/provider/${pd.name}/docs`,
-        include: ['./**/*.{md,mdx}'],
-        routeBasePath: `/providers/${pd.name}`
-      },
-    ];
-  });
-}
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -48,8 +25,17 @@ const config = {
   },
   plugins: [
     [
+      "./src/plugins/provider-docs-plugin",
+      {
+        id: 'provider-docs-plugin',
+        include: ".*\\.(mdx|md)$",
+        excludeDirs: ["internal"],
+      }
+    ],
+    [
       "./src/plugins/provider-data-plugin",
       {
+        id: "provider-data-plugin",
         excludeDir: ["internal"],
       },
     ],
@@ -70,7 +56,6 @@ const config = {
         },
       },
     ],
-    ...getProviderPagesPlugin(["internal"]),
   ],
   presets: [
     [

@@ -16,7 +16,7 @@ const CopyPlugin = require('copy-webpack-plugin');
  * 
  * @type {import('@docusaurus/types/src/plugin').PluginModule} 
  */
-const providerDataPlugin = async function(context, opts) {
+const providerDataPlugin = async function (context, opts) {
   const { siteDir } = context;
   const excludeDir = opts.excludeDir || [];
   const providerPath = path.resolve(siteDir, '../valkyrie/provider/');
@@ -33,7 +33,7 @@ const providerDataPlugin = async function(context, opts) {
           /** @type {ProviderConf} */
           const providerConfig = yaml.parse(confFile);
           return providerConfig;
-        } catch (e) { 
+        } catch (e) {
           console.warn('\x1b[43m', '\x1b[31m', `Failed to configure provider: ${d.name}`, '\x1b[0m');
           console.warn('\x1b[43m', '\x1b[31m', `${e}`, '\x1b[0m');
         }
@@ -46,7 +46,7 @@ const providerDataPlugin = async function(context, opts) {
       const { setGlobalData } = actions;
       const { providers } = content;
       // add provider config data to global data
-      setGlobalData({ providers: providers.map(p => ({ ...p, url: `providers/${p.path}`, cardImageUrl: `${p.path}/${p.cardImage}` })) });
+      setGlobalData({ providers: providers.map(p => ({ ...p, url: `docs/providers/${p.path}`, cardImageUrl: `${p.path}/${p.cardImage}` })) });
     },
     configureWebpack(config, isServer, utils, content) {
       // Copy images from provider docs/assets folder
