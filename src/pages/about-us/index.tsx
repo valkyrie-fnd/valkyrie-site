@@ -31,7 +31,7 @@ export default function AboutUs() {
             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
           </article>
         </div>
-        <img className={styles.image} src="/img/casino.png" />
+        <img className={styles.image} src="img/casino.png" />
         <div className={styles.paragraphWrapper}>
           <h2 className={styles.subHeader}>
             What is the point?

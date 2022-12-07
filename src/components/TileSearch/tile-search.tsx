@@ -51,7 +51,7 @@ function TileSearchItem({ item }: TileSearchItemProps) {
     <Link href={item.url} className={styles.cardLink}>
       <ButtonBase>
         <Card className={styles.card}>
-          <ValkCardMedia src={`/img/${item.cardImageUrl}`} alt={`${item.name}`} />
+          <ValkCardMedia src={`img/${item.cardImageUrl}`} alt={`${item.name}`} />
           <CardContent>
             <Typography gutterBottom variant='h5' component='div'>
               {item.name}

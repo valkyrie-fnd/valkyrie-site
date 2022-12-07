@@ -6,7 +6,7 @@ const config = {
   title: "Valkyrie",
   tagline: "Open sourcing gaming",
   url: "https://valkyrie-fnd.github.io/",
-  baseUrl: "/",
+  baseUrl: "/cupid-barman0-deafening-progress/asdfasdfwerqwerqxva/0.0.1/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
@@ -119,7 +119,7 @@ const config = {
           {
             type: "html",
             position: "right",
-            value: '<img class="menu-logo" width="28" src="/img/Valkyrie-logo-green.svg"/>'
+            value: '<img class="menu-logo" width="28" src="img/Valkyrie-logo-green.svg"/>'
           }
         ],
       },
