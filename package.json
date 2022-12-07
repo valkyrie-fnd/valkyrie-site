@@ -50,6 +50,7 @@
     "@tsconfig/docusaurus": "^1.0.5",
     "chalk": "^4.1.2",
     "copy-webpack-plugin": "^11.0.0",
+    "dotenv": "^16.0.3",
     "mustache": "^4.2.0",
     "react-loadable": "*",
     "typescript": "^4.6.4"

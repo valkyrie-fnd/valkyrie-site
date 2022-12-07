@@ -1,3 +1,4 @@
+require('dotenv').config();
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
@@ -6,7 +7,7 @@ const config = {
   title: "Valkyrie",
   tagline: "Open sourcing gaming",
   url: "https://valkyrie-fnd.github.io/",
-  baseUrl: "/cupid-barman0-deafening-progress/asdfasdfwerqwerqxva/0.0.1/",
+  baseUrl: process.env.VALK_BASE_URL,
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
