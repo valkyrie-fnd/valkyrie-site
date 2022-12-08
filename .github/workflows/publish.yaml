@@ -30,6 +30,8 @@ jobs:
         run: yarn
 
       - name: Build dist
+        env:
+          GH_TOKEN: ${{secrets.VALK_TOKEN}}
         run: VALK_BASE_URL="/${{env.BUCKET_NAME}}/${{ env.VERSION }}/" yarn build
 
       - id: "auth"

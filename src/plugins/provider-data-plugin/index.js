@@ -1,7 +1,11 @@
 const yaml = require('yaml');
 const fs = require('fs/promises');
+const fsSync = require('fs');
 const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
+const { Octokit } = require('octokit');
+const axios = require("axios");
+require('dotenv').config();
 /**
  * @typedef {Object} ProviderConf
  * @property {number} id - id of provider
@@ -10,6 +14,25 @@ const CopyPlugin = require('copy-webpack-plugin');
  * @property {string} description - short description of provider
  * @property {string} url - relative url to route to provider
  */
+const octokit = new Octokit({ auth: process.env.GH_TOKEN });
+
+async function downloadRecursive(dest, location) {
+  const content = await octokit.rest.repos.getContent({
+    owner: "four-fingers",
+    repo: "valkyrie",
+    path: location
+  });
+  await Promise.all(content.data.map(async dc => {
+    if (dc.download_url) {
+      const res = await axios.get(dc.download_url);
+      await fs.writeFile(path.resolve(dest, dc.name), res.data);
+    }
+    if (dc.type === "dir") {
+      const subDir = path.resolve(dest, dc.name);
+      await downloadRecursive(subDir, dc.path);
+    }
+  }));
+}
 
 /** 
  * Plugin finds config.yml and markdown filers from Provider modules. These are used to build provider pages.
@@ -19,10 +42,30 @@ const CopyPlugin = require('copy-webpack-plugin');
 const providerDataPlugin = async function (context, opts) {
   const { siteDir } = context;
   const excludeDir = opts.excludeDir || [];
-  const providerPath = path.resolve(siteDir, '../valkyrie/provider/');
-  const providerDirs = (await fs.readdir(providerPath, { withFileTypes: true }))
-    .filter(d => d.isDirectory() && !excludeDir.includes(d.name));
-
+  let providerPath = path.resolve(siteDir, '../valkyrie/provider/');
+  let providerDirs;
+  // if valkyrie exist locally
+  if (fsSync.existsSync(providerPath)) {
+    providerDirs = (await fs.readdir(providerPath, { withFileTypes: true }))
+      .filter(d => d.isDirectory() && !excludeDir.includes(d.name));
+  } else {
+    // if not create a temp folder and download files from github
+    if (!fsSync.existsSync("tmp-provider"))
+      await fs.mkdir("tmp-provider");
+    const repoContent = await octokit.rest.repos.getContent({
+      owner: "four-fingers",
+      repo: "valkyrie",
+      path: "provider"
+    });
+    providerPath = path.resolve("tmp-provider");
+    providerDirs = repoContent.data.filter(d => d.type === "dir" && !excludeDir.includes(d.name));
+    await Promise.all(providerDirs.map(async d => {
+      const providerDocsDir = path.resolve("tmp-provider", d.name, "docs");
+      if (!fsSync.existsSync(providerDocsDir))
+        await fs.mkdir(assetsDir, { recursive: true });
+      await downloadRecursive(providerDocsDir, `${d.path}/docs`);
+    }));
+  }
   /** @type {import('@docusaurus/types/src/plugin').Plugin<{providers: ProviderContentData[]>} */
   var plugin = {
     name: 'provider-data-plugin',

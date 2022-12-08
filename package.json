@@ -48,10 +48,12 @@
     "@babel/core": "^7.0.0",
     "@docusaurus/module-type-aliases": "latest",
     "@tsconfig/docusaurus": "^1.0.5",
+    "axios": "^1.2.1",
     "chalk": "^4.1.2",
     "copy-webpack-plugin": "^11.0.0",
     "dotenv": "^16.0.3",
     "mustache": "^4.2.0",
+    "octokit": "^2.0.10",
     "react-loadable": "*",
     "typescript": "^4.6.4"
   },
