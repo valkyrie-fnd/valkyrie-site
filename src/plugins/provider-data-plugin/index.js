@@ -29,6 +29,8 @@ async function downloadRecursive(dest, location) {
     }
     if (dc.type === "dir") {
       const subDir = path.resolve(dest, dc.name);
+      if (!fsSync.existsSync(subDir))
+        await fs.mkdir(subDir, { recursive: true });
       await downloadRecursive(subDir, dc.path);
     }
   }));
@@ -62,7 +64,7 @@ const providerDataPlugin = async function (context, opts) {
     await Promise.all(providerDirs.map(async d => {
       const providerDocsDir = path.resolve("tmp-provider", d.name, "docs");
       if (!fsSync.existsSync(providerDocsDir))
-        await fs.mkdir(assetsDir, { recursive: true });
+        await fs.mkdir(providerDocsDir, { recursive: true });
       await downloadRecursive(providerDocsDir, `${d.path}/docs`);
     }));
   }
