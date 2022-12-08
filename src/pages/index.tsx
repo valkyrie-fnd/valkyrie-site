@@ -1,44 +1,53 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import GridViewRoundedIcon from '@mui/icons-material/GridViewRounded';
+import WalletRoundedIcon from '@mui/icons-material/WalletRounded';
+import OpenInNewRoundedIcon from '@mui/icons-material/OpenInNewRounded';
 import Layout from '@theme/Layout';
 import styles from './index.module.css';
+import { ValkLogo } from '@site/src/components/ValkLogo';
+import { ValkButton } from '@site/src/components/ValkButton';
+import Link from '@docusaurus/Link';
 
-export default function MainPage() {
-  const features = [
-    {
-      title: "What's this?",
-      text: "The #1 open source venue for game providers and gaming operators to meet, greet and collaborate. For free!",
-    },
-    {
-      title: "What's the point?",
-      text: "Tired of aggregator platforms ripping you off for lousy service and lock-in contracts? Well, with a minimal effort - you can do it yourselves. For free!",
-    },
-    {
-      title: "How to get started?",
-      text: "Checkout the connected game providers - and join the community. Easy integrate and start gaming! Again... for free!",
-    }
-  ];
+export default function MainPage(props) {
+  useEffect(() => {
+    // Used to make transparent on this page
+    document.body.classList.add('main-page');
+    return () => { document.body.classList.remove('main-page'); }
+  }, []);
   return (
     <Layout >
       <main>
-        <div className={`${styles.heroBanner} text--center section`} data-theme='dark'>
-          <div className={styles.heroContent}>
-            <h1>
-              Valkyrie, open sourcing gaming
-            </h1>
+        <div className={`container ${styles.mainPage}`}>
+          <div className={styles.left}>
+            <ValkLogo />
           </div>
-        </div>
-        <div className='container text--center'>
-          <h2>Why Valkyrie?</h2>
-        </div>
-        <div className={`${styles.features} container text--center section`}>
-          <h2>Features</h2>
-          <div className="row">
-            {features.map((f, idx) => (
-              <div className="col" key={idx}>
-                <h3>{f.title}</h3>
-                <p>{f.text}</p>
-              </div>
-            ))}
+          <div className={styles.right}>
+            <h1 className={styles.header}>
+              An open source platform where Game providers and Gaming operators meet & collaborate
+            </h1>
+            <h3 className={styles.subHeader}>
+              Always Open Source and free to use, maintained by Valkyrie Foundation. Read more about Valkyrie <Link href="./about-us">here</Link>
+            </h3>
+            <div className={styles.buttons}>
+              <ValkButton
+                className={styles.button}
+                startIcon={<GridViewRoundedIcon />}
+                href="/providers">
+                Game Providers
+              </ValkButton>
+              <ValkButton
+                className={styles.button}
+                startIcon={<WalletRoundedIcon />}
+                href="/docs/wallet/valkyrie-pam-api">
+                Wallets
+              </ValkButton>
+              <ValkButton
+                className={styles.button}
+                startIcon={<OpenInNewRoundedIcon />}
+                href="/docs/gamelaunch/valkyrie-provider-endpoints">
+                Game Launcher
+              </ValkButton>
+            </div>
           </div>
         </div>
       </main>

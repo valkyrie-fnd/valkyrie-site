@@ -1,37 +1,13 @@
+require('dotenv').config();
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
-const path = require('path');
-const fs = require('fs')
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-
-/**
- * Add content pages from provider module docs folders. 
- * All .md and .mdx files in the provider module docs folders are used
- */
-function getProviderPagesPlugin(excludeDirs) {
-  const providerPath = path.resolve('../valkyrie/provider');
-  const providerDirs = fs.readdirSync(providerPath, { withFileTypes: true })
-    .filter(d => d.isDirectory() && !excludeDirs.includes(d.name));
-  return providerDirs.map(pd => {
-    return [
-      '@docusaurus/plugin-content-pages',
-      {
-        id: `provider-pages-${pd.name}`,
-        path: `../valkyrie/provider/${pd.name}/docs`,
-        include: ['./**/*.{md,mdx}'],
-        routeBasePath: `/providers/${pd.name}`
-      },
-    ];
-  });
-}
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Valkyrie",
   tagline: "Open sourcing gaming",
   url: "https://valkyrie-fnd.github.io/",
-  baseUrl: "/",
+  baseUrl: process.env.VALK_BASE_URL,
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
@@ -50,41 +26,49 @@ const config = {
   },
   plugins: [
     [
+      "./src/plugins/provider-docs-plugin",
+      {
+        id: 'provider-docs-plugin',
+        include: ".*\\.(mdx|md)$",
+        excludeDirs: ["internal", "docs"],
+      }
+    ],
+    [
       "./src/plugins/provider-data-plugin",
       {
-        excludeDir: ["internal"],
+        id: "provider-data-plugin",
+        excludeDir: ["internal", "docs"],
       },
     ],
-    ...getProviderPagesPlugin(["internal"]),
+    [
+      "docusaurus-plugin-openapi-docs",
+      {
+        id: "apiDocs",
+        docsPluginId: "classic",
+        config: {
+          wallet: {
+            specPath: "../valkyrie/pam/pam_api.yml",
+            outputDir: "docs/wallet",
+          },
+          launch: {
+            specPath: "../valkyrie/provider/provider_api.yml",
+            outputDir: "docs/gamelaunch",
+          }
+        },
+      },
+    ],
   ],
   presets: [
-    [
-      // redoc plugin for displaying the OAPI specs
-      "redocusaurus",
-      {
-        specs: [
-          {
-            spec: "../valkyrie/pam/pam_api.yml",
-            route: "/wallets",
-          },
-          {
-            spec: "../valkyrie/provider/provider_api.yml",
-            route: "/launch",
-          },
-        ],
-      },
-    ],
     [
       "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          routeBasePath: "/docs",
+          path: "docs",
+          routeBasePath: "docs",
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/valkyrie-fnd/valkyrie-site",
+          docLayoutComponent: "@theme/DocPage",
+          docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi-docs
         },
         blog: {
           blogTitle: "Valkyrie blog!",
@@ -102,81 +86,56 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "Valkyrie",
         logo: {
           alt: "valkyrie logo",
-          src: "img/down.svg",
+          src: "img/Valkyrie-green.svg",
         },
         items: [
           {
-            label: "Providers",
+            label: "ABOUT US",
+            to: "/about-us",
+            position: "right",
+          },
+          {
+            label: "PROVIDERS",
             to: "/providers",
-          },
-          {
-            label: "Wallets",
-            to: "/wallets",
-          },
-          {
-            label: "Launch",
-            to: "/launch",
-          },
-          {
-            to: "blog",
-            position: "left",
-            label: "Blog",
+            position: "right",
           },
           {
             type: "doc",
             docId: "intro",
-            position: "left",
-            label: "Docs",
+            position: "right",
+            label: "DOCS",
+          },
+          {
+            to: "blog",
+            label: "BLOG",
+            position: "right",
           },
           {
             href: "https://github.com/valkyrie-fnd",
-            label: "GitHub",
+            label: "GITHUB",
             position: "right",
           },
-        ],
-      },
-      footer: {
-        style: "dark",
-        links: [
           {
-            items: [
-              {
-                label: "Home",
-                to: "/",
-              },
-              {
-                label: "Providers",
-                to: "/providers",
-              },
-              {
-                label: "Wallets",
-                to: "/wallets",
-              },
-              {
-                label: "Launch",
-                to: "/launch",
-              },
-              {
-                label: "Blog",
-                to: "/blog",
-              },
-              {
-                label: "Docs",
-                to: "/docs",
-              },
-            ],
-          },
+            type: "html",
+            position: "right",
+            value: '<img class="menu-logo" width="28" src="img/Valkyrie-logo-green.svg"/>'
+          }
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Valkyrie, Inc. Built with Docusaurus.`,
       },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+      metadata: [{ name: "robots", content: "noindex" }],
+      footer: {
+        copyright: `Copyright © ${new Date().getFullYear()} Valkyrie Foundation. Built with Docusaurus.`,
+      },
+      colorMode: {
+        disableSwitch: true,
       },
     }),
+  stylesheets: [
+    "https://fonts.googleapis.com/css2?family=Bai+Jamjuree"
+  ],
+  themes: ["docusaurus-theme-openapi-docs"],
 };
 
 module.exports = config;

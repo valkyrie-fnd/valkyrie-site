@@ -1,0 +1,28 @@
+:global(.MuiButton-root).valkButton {
+  margin: 0.3rem 0;
+  justify-content: flex-start;
+  transition: transform .15s;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+:global(.MuiButton-root).valkButton:hover {
+  transform: scale(1.01);
+  background-color: var(--ifm-color-secondary);
+}
+
+:global(.MuiButton-root).valkButton:hover .buttonArrow {
+  opacity: 1;
+}
+
+.buttonArrow {
+  opacity: 0.3;
+  transition: opacity 0.15s;
+}
+
+.buttonContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
