@@ -30,7 +30,7 @@ jobs:
         run: yarn
 
       - name: Build dist
-        run: VALK_BASE_URL="/${{BUCKET_NAME}}/${{ env.VERSION }}/" yarn build
+        run: VALK_BASE_URL="/${{env.BUCKET_NAME}}/${{ env.VERSION }}/" yarn build
 
       - id: "auth"
         name: Authenticate to Google Cloud
