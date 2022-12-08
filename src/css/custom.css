@@ -3,45 +3,6 @@
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
  */
-@font-face {
-  font-family: 'Rajdhani';
-  src: url('/static/fonts/Rajdhani-Light.ttf') format("truetype");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap
-}
-
-@font-face {
-  font-family: 'Rajdhani';
-  src: url('/static/fonts/Rajdhani-Regular.ttf') format("truetype");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Rajdhani';
-  src: url('/static/fonts/Rajdhani-Medium.ttf') format("truetype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap
-}
-
-@font-face {
-  font-family: 'Rajdhani';
-  src: url('/static/fonts/Rajdhani-SemiBold.ttf') format("truetype");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap
-}
-
-@font-face {
-  font-family: 'Rajdhani';
-  src: url('/static/fonts/Rajdhani-Bold.ttf') format("truetype");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap
-}
 
 /* You can override the default Infima variables here. */
 :root {
@@ -69,7 +30,7 @@
   /*White-beige: #F4F1EE*/
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  --ifm-font-family-base: "Rajdhani", sans-serif;
+  --ifm-font-family-base: "Bai Jamjuree";
   --ifm-container-width-xl: 1420px;
 }
 

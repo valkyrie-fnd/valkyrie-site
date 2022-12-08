@@ -30,14 +30,14 @@ const config = {
       {
         id: 'provider-docs-plugin',
         include: ".*\\.(mdx|md)$",
-        excludeDirs: ["internal"],
+        excludeDirs: ["internal", "docs"],
       }
     ],
     [
       "./src/plugins/provider-data-plugin",
       {
         id: "provider-data-plugin",
-        excludeDir: ["internal"],
+        excludeDir: ["internal", "docs"],
       },
     ],
     [
@@ -132,6 +132,9 @@ const config = {
         disableSwitch: true,
       },
     }),
+  stylesheets: [
+    "https://fonts.googleapis.com/css2?family=Bai+Jamjuree"
+  ],
   themes: ["docusaurus-theme-openapi-docs"],
 };
 
