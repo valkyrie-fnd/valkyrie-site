@@ -1,5 +1,5 @@
 ---
-title: "Redtiger"
+title: "Red Tiger"
 id: "redtiger-index"
 ---
 
