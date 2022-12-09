@@ -64,5 +64,5 @@ jobs:
         uses: "google-github-actions/upload-cloud-storage@v1"
         with:
           path: "build"
-          destination: "${{env.BUCKET-NAME}}/${{ env.version}}"
+          destination: "${{env.BUCKET_NAME}}/${{ env.version}}"
           parent: false
