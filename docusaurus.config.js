@@ -71,6 +71,7 @@ const config = {
           docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi-docs
         },
         blog: {
+          routeBasePath: "updates",
           blogTitle: "Valkyrie blog!",
           blogDescription: "Info on what's on",
           postsPerPage: "ALL",
@@ -108,8 +109,8 @@ const config = {
             label: "DOCS",
           },
           {
-            to: "blog",
-            label: "BLOG",
+            to: "updates",
+            label: "UPDATES",
             position: "right",
           },
           {
