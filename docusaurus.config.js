@@ -126,7 +126,7 @@ const config = {
       },
       metadata: [{ name: "robots", content: "noindex" }],
       footer: {
-        copyright: `Copyright © ${new Date().getFullYear()} Valkyrie Foundation. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Valkyrie fnd. Built with Docusaurus.`,
       },
       colorMode: {
         disableSwitch: true,

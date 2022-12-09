@@ -3,6 +3,7 @@ import Layout from '@theme/Layout'
 import React from 'react'
 import WhatIs from './_what-is.mdx';
 import ThePoint from './_the-point.mdx';
+import ContactUs from './_contact-us.mdx';
 import styles from './about-us.module.css';
 import MDXContent from '@theme/MDXContent';
 
@@ -28,6 +29,11 @@ export default function AboutUs() {
             </MDXContent>
           </article>
           <LetsBegin></LetsBegin>
+          <article className={`${styles.container}`}>
+            <MDXContent>
+              <ContactUs />
+            </MDXContent>
+          </article>
         </div>
       </main>
     </Layout>
