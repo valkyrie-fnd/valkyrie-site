@@ -8,7 +8,7 @@ Valkyrie image is built using:
 docker build -t valkyrie .
 ```
 
-You can then run a Valkyrie container using:
+You can then run a valkyrie container using:
 
 ```shell
 docker run -v /absolute/path/config.yml:/app/config.yml valkyrie -config config.yml

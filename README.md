@@ -28,12 +28,12 @@ This command generates static content into the `build` directory and can be serv
 ```
 yarn gen-api-docs
 ```
-This command generates md documentation for openapi specifications. Requires valkyrie to be present on the system
+This command generates md documentation for openapi specifications. Requires Valkyrie to be present on the system
 
 ```
 yarn gen-provider-docs
 ```
-This command generates md documentation from provider modules inside valkyrie. Requires valkyrie to be present on the system
+This command generates md documentation from provider modules inside Valkyrie. Requires Valkyrie to be present on the system
 ### Deployment
 
 Update version in `package.json` and then push a tag with the same version number with the format `v1.2.3`. This will trigger a build of the site and push it to GCS.

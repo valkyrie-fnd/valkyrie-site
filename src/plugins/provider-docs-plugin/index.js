@@ -15,7 +15,7 @@ function providerDocsPlugin(context, options) {
         .action(async () => {
           const providerPath = path.resolve('../valkyrie/provider');
           if (!fs.existsSync(providerPath)) {
-            console.error(chalk.red(`valkyrie is needed to generate provider docs`));
+            console.error(chalk.red(`Valkyrie is needed to generate provider docs`));
             return;
           }
           const defaultFileNames = ["index.md", "index.mdx"];

@@ -9,7 +9,7 @@ It is the system the operator uses to keep track of the players accounts and bal
 
 Valkyrie is in essence an integration between the operator's wallet implementation and the provider's APIs.
 
-Available wallets in valkyrie can be found [here](/docs/wallet/valkyrie-pam-api).
+Available wallets in Valkyrie can be found [here](/docs/wallet/valkyrie-pam-api).
 
 ### Configuration
 Name of the pam is found in the specific documentation above

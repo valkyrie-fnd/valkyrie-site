@@ -20,7 +20,7 @@ You can then simply run Valkyrie using:
 ```
 This will open two ports: `:8083` and `:8084`. On port 8084 you will have a game launch endpoint.
 
-Port 8083 is open for the provider to communicate with valkyrie, and valkyrie will normalize the request to your specified PAM module.
+Port 8083 is open for the provider to communicate with Valkyrie, and Valkyrie will normalize the request to your specified PAM module.
 
 ## Configuration
 
