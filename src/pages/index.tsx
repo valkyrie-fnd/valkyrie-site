@@ -10,9 +10,8 @@ import Link from '@docusaurus/Link';
 
 export default function MainPage(props) {
   useEffect(() => {
-    // Used to make transparent on this page
-    document.body.classList.add('main-page');
-    return () => { document.body.classList.remove('main-page'); }
+    document.documentElement.classList.add('main-page');
+    return () => { document.documentElement.classList.remove('main-page'); }
   }, []);
   return (
     <Layout >
