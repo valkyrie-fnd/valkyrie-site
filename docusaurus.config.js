@@ -51,7 +51,7 @@ const config = {
             outputDir: "docs/wallet",
           },
           launch: {
-            specPath: "../valkyrie/provider/provider_api.yml",
+            specPath: "../valkyrie/provider/docs/operator_api.yml",
             outputDir: "docs/gamelaunch",
           }
         },
@@ -71,6 +71,7 @@ const config = {
           docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi-docs
         },
         blog: {
+          routeBasePath: "updates",
           blogTitle: "Valkyrie blog!",
           blogDescription: "Info on what's on",
           postsPerPage: "ALL",
@@ -108,8 +109,8 @@ const config = {
             label: "DOCS",
           },
           {
-            to: "blog",
-            label: "BLOG",
+            to: "updates",
+            label: "UPDATES",
             position: "right",
           },
           {
@@ -126,7 +127,7 @@ const config = {
       },
       metadata: [{ name: "robots", content: "noindex" }],
       footer: {
-        copyright: `Copyright © ${new Date().getFullYear()} Valkyrie Foundation. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Valkyrie fnd. Built with Docusaurus.`,
       },
       colorMode: {
         disableSwitch: true,

@@ -3,7 +3,13 @@
   "extends": "@tsconfig/docusaurus/tsconfig.json",
   "compilerOptions": {
     "baseUrl": ".",
-    "moduleResolution": "Node16"
+    "moduleResolution": "Node16",
+    "types": [
+      "node",
+      "@docusaurus/module-type-aliases",
+      "@docusaurus/theme-classic",
+      "mdx"
+    ],
   },
   "exclude": [
     "node_modules"

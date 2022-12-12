@@ -4,7 +4,7 @@ sidebar_position: 3
 ---
 
 ### Valkyrie Config
-Supply a config file when running valkyrie. It contains config for logging and tracing as well as provider specific configuration. It's possible to add environment variables within `${}`, which will be replaced before the yaml is processed.
+Supply a yaml config file when running Valkyrie. It contains config for logging and tracing as well as provider specific configuration. It's possible to add environment variables within `${}`, which will be replaced before the yaml is processed.
 ```yaml
 logging:
   level: info # debug, info, warn, error, fatal, panic
@@ -33,4 +33,4 @@ http_client: # optional http client configuration
   request_timeout: 1s
 ```
 
-For a full list of available provider please look [here](/providers). Each provider specifies what configuration is needed.
+For a full list of available providers please look [here](/providers). Each provider specifies what configuration is needed.

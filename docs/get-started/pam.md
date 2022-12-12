@@ -2,17 +2,22 @@
 title: Player Account Management
 sidebar_position: 5
 ---
+
+### PAM
+A PAM is the system the operator uses to keep track of the players' accounts and balances. Also referred to as wallet.
 ### Wallets
 When configuring Valkyrie you need to specify a compatible PAM(player account management) also called wallets.
 
 It is the system the operator uses to keep track of the players accounts and balance, why it is also referenced as wallets.
 
-Valkyrie is in essence an integration between the operator's wallet implementation and the provider's APIs.
+Valkyrie is in essence an integration between the operator's wallet implementation and the provider's API.
 
-Available wallets in valkyrie can be found [here](/docs/wallet/valkyrie-pam-api).
+Available wallets in Valkyrie can be found [here](/docs/wallet/valkyrie-pam-api).
 
 ### Configuration
-Name of the pam is found in the specific documentation above
+Specify what pam to use in the configuration. If you're using Valkyrie PAM API you specify `generic` as the name.
+
+
 ```yaml
 pam:
   name: generic # Name of the wallet

@@ -1,3 +1,4 @@
+const yaml = require('yaml');
 const path = require('path');
 const fs = require('fs')
 const chalk = require('chalk');
@@ -14,7 +15,7 @@ function providerDocsPlugin(context, options) {
         .action(async () => {
           const providerPath = path.resolve('../valkyrie/provider');
           if (!fs.existsSync(providerPath)) {
-            console.error(chalk.red(`valkyrie is needed to generate provider docs`));
+            console.error(chalk.red(`Valkyrie is needed to generate provider docs`));
             return;
           }
           const defaultFileNames = ["index.md", "index.mdx"];
@@ -50,9 +51,10 @@ id: "{{{id}}}"
             // copy all files to new folders in docs hierarchy
             providerDocs.forEach(doc => {
               const docContent = fs.readFileSync(path.resolve(providerDocsPath, doc.name));
-
+              const confFile = fs.readFileSync(path.resolve(providerDocsPath, 'config.yml'), 'utf-8');
+              const providerConfig = yaml.parse(confFile);
               let title = defaultFileNames.includes(doc.name) ?
-                pd.name :
+                providerConfig.name :
                 doc.name.split(".").reduce((acc, cur, curI, arr) => {
                   if (curI === arr.length - 1) {
                     // remove "-"
@@ -60,7 +62,7 @@ id: "{{{id}}}"
                   }
                   return `${acc}${cur}-`
                 }, "");
-              const id = pd.name !== title ? `${pd.name}-${title}` : `${title}-index`;
+              const id = !defaultFileNames.includes(doc.name) ? `${pd.name}-${title}` : `${pd.name}-index`;
               title = title[0].toUpperCase() + title.substring(1);
               const output = mustache.render(template, { title, id, markdown: docContent });
               fs.writeFileSync(path.resolve(outputDir, doc.name), output)

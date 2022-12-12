@@ -1,9 +1,11 @@
 import { LetsBegin } from '@site/src/components/LetsBegin';
 import Layout from '@theme/Layout'
 import React from 'react'
-
+import WhatIs from './_what-is.mdx';
+import ThePoint from './_the-point.mdx';
+import ContactUs from './_contact-us.mdx';
 import styles from './about-us.module.css';
-
+import MDXContent from '@theme/MDXContent';
 
 export default function AboutUs() {
   return (
@@ -13,65 +15,25 @@ export default function AboutUs() {
           <h1 className={`${styles.header}`}>
             About us
           </h1>
-          <h2 className={styles.subHeader}>
-            What is Valkyrie?
-          </h2>
-          <article className={`${styles.container}`}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-          </article>
-          <article className={`${styles.container}`}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+          <article className={styles.container}>
+            <MDXContent >
+              <WhatIs className={styles.container} />
+            </MDXContent>
           </article>
         </div>
         <img className={styles.image} src="img/casino.png" />
         <div className={styles.paragraphWrapper}>
-          <h2 className={styles.subHeader}>
-            What is the point?
-          </h2>
           <article className={`${styles.container}`}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+            <MDXContent>
+              <ThePoint />
+            </MDXContent>
           </article>
-          <article className={`${styles.container}`}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-          </article>
-        </div>
-        <div className={styles.paragraphWrapper}>
-          <h2 className={styles.subHeader}>
-            How to get started?
-          </h2>
-          <article className={`${styles.container}`}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-          </article>
-          <article className={`${styles.container}`}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-          </article>
-          {/* <div className={`${styles.paragraphWrapper} ${styles.container}`}> */}
           <LetsBegin></LetsBegin>
-          {/* </div> */}
+          <article className={`${styles.container}`}>
+            <MDXContent>
+              <ContactUs />
+            </MDXContent>
+          </article>
         </div>
       </main>
     </Layout>
