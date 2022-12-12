@@ -16,7 +16,7 @@ export function LetsBegin() {
         <ValkButton startIcon={<WalletRoundedIcon />} href="/docs/wallet/valkyrie-pam-api">
           Wallets
         </ValkButton>
-        <ValkButton startIcon={<OpenInNewRoundedIcon />} href="/docs/gamelaunch/valkyrie-provider-endpoints">
+        <ValkButton startIcon={<OpenInNewRoundedIcon />} href="/docs/gamelaunch/valkyrie-operator-api">
           Game Launcher
         </ValkButton>
       </div>

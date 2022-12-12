@@ -44,7 +44,7 @@ export default function MainPage(props) {
               <ValkButton
                 className={styles.button}
                 startIcon={<OpenInNewRoundedIcon />}
-                href="/docs/gamelaunch/valkyrie-provider-endpoints">
+                href="/docs/gamelaunch/valkyrie-operator-api">
                 Game Launcher
               </ValkButton>
             </div>
