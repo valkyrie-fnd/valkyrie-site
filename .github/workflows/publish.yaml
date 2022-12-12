@@ -52,11 +52,10 @@ jobs:
       # Check if version folder exist.
       - id: check-exist
         name: Check if exist
-        continue-on-error: true
-        run: gsutil -q stat "gs://${{ env.BUCKET_NAME }}/${{ env.VERSION }}"
+        run: gsutil -q stat "gs://${{ env.BUCKET_NAME }}/${{ env.VERSION }}" && echo "EXIST=true" >> $GITHUB_OUTPUT || echo "EXIST=false" >> $GITHUB_OUTPUT
 
       - name: Remove if version exist
-        if: steps.check-exist.outcome == 'success'
+        if: steps.check-exist.outputs.EXIST == true
         run: gsutil rm -r "gs://${{ env.BUCKET_NAME }}/${{ env.VERSION }}"
 
       - id: "upload-files"
@@ -64,5 +63,5 @@ jobs:
         uses: "google-github-actions/upload-cloud-storage@v1"
         with:
           path: "build"
-          destination: "${{env.BUCKET_NAME}}/${{ env.version}}"
+          destination: "${{ env.BUCKET_NAME }}/${{ env.VERSION }}"
           parent: false
