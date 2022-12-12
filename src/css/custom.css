@@ -32,6 +32,7 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-font-family-base: "Bai Jamjuree";
   --ifm-container-width-xl: 1420px;
+  --ifm-tabs-color-active: var(--ifm-color-content);
 }
 
 .theme-doc-sidebar-container {
@@ -84,4 +85,9 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+/* Used in tabs in OAPI generated docs*/
+.tabs__item span {
+  color: var(--ifm-color-content);
 }

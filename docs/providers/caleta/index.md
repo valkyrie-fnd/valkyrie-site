@@ -4,7 +4,7 @@ id: "caleta-index"
 ---
 
 ## Caleta
-[Caleta Gaming System](https://caletagaming.com/) is complete RGS + RNG system that has been designed to offer Game Providers and Operators an easy and quick solution for any kind of Game Platform: Slots, Bingo, Kenos, Video Poker, etc.
+[Caleta Gaming System](https://caletagaming.com/) is a complete RGS + RNG system that has been designed to offer Game Providers and Operators an easy and quick solution for any kind of Game Platform: Slots, Bingo, Kenos, Video Poker, etc.
 
 ### Required Configuration
 As always, contact the provider before you begin in order to get hold of URLs, keys and parameters. 

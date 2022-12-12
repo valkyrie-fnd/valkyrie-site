@@ -11,7 +11,7 @@ id: "evolution-index"
 
 ### Wallet API
 
-See our wallet API (https://studio.evolution.com/api/docs) for details on how to integrate directly with Evolution RGS or integrate via Valkyrie and you'll do the job once.
+See the wallet API (https://studio.evolution.com/api/docs) for details on how to integrate directly with Evolution RGS or integrate via Valkyrie and you'll do the job once.
 
 ### Valkyrie integration
 

@@ -11,7 +11,7 @@ id: "redtiger-index"
 
 ### Wallet API
 
-See our wallet API (https://dev.redtigergaming.com/#!/) for details on how to integrate directly with RT RGS or integrate via Valkyrie and you'll do the job once.
+See the wallet API (https://dev.redtigergaming.com/#!/) for details on how to integrate directly with RT RGS or integrate via Valkyrie and you'll do the job once.
 
 ### Valkyrie integration
 
