@@ -98,7 +98,7 @@ const config = {
             position: "right",
           },
           {
-            label: "PROVIDERS",
+            label: "GAME PROVIDERS",
             to: "/providers",
             position: "right",
           },
@@ -127,6 +127,33 @@ const config = {
       },
       metadata: [{ name: "robots", content: "noindex" }],
       footer: {
+        logo: {
+          width: 28,
+          href: process.env.VALK_BASE_URL,
+          src: "img/Valkyrie-logo-green.svg",
+        },
+        links: [
+          {
+            label: "ABOUT US",
+            to: "/about-us",
+          },
+          {
+            label: "GAME PROVIDERS",
+            to: "/providers",
+          },
+          {
+            to: "/docs/",
+            label: "DOCS",
+          },
+          {
+            to: "updates",
+            label: "UPDATES",
+          },
+          {
+            href: "https://github.com/valkyrie-fnd",
+            label: "GITHUB",
+          },
+        ],
         copyright: `Copyright © ${new Date().getFullYear()} Valkyrie fnd. Built with Docusaurus.`,
       },
       colorMode: {
