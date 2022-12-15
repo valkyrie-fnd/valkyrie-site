@@ -72,6 +72,8 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          showLastUpdateTime: true,
+          showLastUpdateAuthor: true,
           path: "docs",
           routeBasePath: "docs",
           docLayoutComponent: "@theme/DocPage",
