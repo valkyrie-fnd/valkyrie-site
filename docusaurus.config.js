@@ -54,9 +54,9 @@ const config = {
             specPath: "../valkyrie/provider/docs/operator_api.yml",
             outputDir: "docs/gamelaunch",
           },
-          providerDoc: {
+          providerApis: {
             specPath: "../valkyrie/provider/docs/generated/provider_swagger.yaml",
-            outputDir: "docs/providerDoc",
+            outputDir: "docs/providerApis",
             sidebarOptions: {
               groupPathsBy: "tag",
               categoryLinkSource: "tag",
@@ -78,11 +78,11 @@ const config = {
           docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi-docs
           async sidebarItemsGenerator({ defaultSidebarItemsGenerator, ...args }) {
             const sidebarItems = await defaultSidebarItemsGenerator(args);
-            const newItems = sidebarItems.filter(i => i.label !== "providerDoc");
+            const newItems = sidebarItems.filter(i => i.label !== "providerApis");
             newItems.push({
               type: "category",
-              label: "ProviderDoc",
-              items: require("./docs/providerDoc/sidebar.js")
+              label: "Provider API",
+              items: require("./docs/providerApis/sidebar.js")
             });
             return newItems;
           }

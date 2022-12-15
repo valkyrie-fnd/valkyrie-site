@@ -1,13 +1,13 @@
 ---
-id: evo-credit
-title: "Credit"
-description: "Used to credit user’s account (settle bets)"
-sidebar_label: "Credit"
+id: evo-debit
+title: "Debit"
+description: "Used to debit from account (place bets)"
+sidebar_label: "Debit"
 hide_title: true
 hide_table_of_contents: true
-api: {"description":"Used to credit user’s account (settle bets)","operationId":"EvoCredit","parameters":[{"description":"Api token","in":"query","name":"authToken","required":true,"schema":{"type":"string"}}],"requestBody":{"$ref":"#/components/requestBodies/EvoCreditReq"},"responses":{"200":{"description":"OK","content":{"application/json":{"schema":{"properties":{"balance":{"type":"number"},"bonus":{"type":"number"},"retransmission":{"type":"boolean"},"status":{"type":"string"},"uuid":{"type":"string"}},"required":["balance","status"],"type":"object"}}}},"400":{"description":"Bad Request","content":{"application/json":{"schema":{"properties":{"balance":{"type":"number"},"bonus":{"type":"number"},"retransmission":{"type":"boolean"},"status":{"type":"string"},"uuid":{"type":"string"}},"required":["balance","status"],"type":"object"}}}},"500":{"description":"Internal Server Error","content":{"application/json":{"schema":{"properties":{"balance":{"type":"number"},"bonus":{"type":"number"},"retransmission":{"type":"boolean"},"status":{"type":"string"},"uuid":{"type":"string"}},"required":["balance","status"],"type":"object"}}}}},"tags":["Evolution"],"method":"post","path":"/providers/evolution/credit","info":{"contact":{"name":"Valkyrie Foundation"},"description":"This is a interactive Swagger documentation for Valkyrie Provider API","license":{"name":"MIT"},"title":"Valkyrie Provider API","version":""},"postman":{"name":"Credit","description":{"content":"Used to credit user’s account (settle bets)","type":"text/plain"},"url":{"path":["providers","evolution","credit"],"host":["{{baseUrl}}"],"query":[{"disabled":false,"description":{"content":"(Required) Api token","type":"text/plain"},"key":"authToken","value":""}],"variable":[]},"header":[{"key":"Content-Type","value":"application/json"},{"key":"Accept","value":"application/json"}],"method":"POST","body":{"mode":"raw","raw":"\"\"","options":{"raw":{"language":"json"}}}}}
+api: {"description":"Used to debit from account (place bets)","operationId":"EvoDebit","parameters":[{"description":"Api token","in":"query","name":"authToken","required":true,"schema":{"type":"string"}}],"requestBody":{"$ref":"#/components/requestBodies/EvoCreditReq"},"responses":{"200":{"description":"OK","content":{"application/json":{"schema":{"properties":{"balance":{"type":"number"},"bonus":{"type":"number"},"retransmission":{"type":"boolean"},"status":{"type":"string"},"uuid":{"type":"string"}},"required":["balance","status"],"type":"object"}}}},"400":{"description":"Bad Request","content":{"application/json":{"schema":{"properties":{"balance":{"type":"number"},"bonus":{"type":"number"},"retransmission":{"type":"boolean"},"status":{"type":"string"},"uuid":{"type":"string"}},"required":["balance","status"],"type":"object"}}}},"500":{"description":"Internal Server Error","content":{"application/json":{"schema":{"properties":{"balance":{"type":"number"},"bonus":{"type":"number"},"retransmission":{"type":"boolean"},"status":{"type":"string"},"uuid":{"type":"string"}},"required":["balance","status"],"type":"object"}}}}},"tags":["Evolution"],"method":"post","path":"/providers/evolution/debit","info":{"contact":{},"description":"The exposed endpoints by the enabled game provider modules.","license":{"name":"MIT","url":"https://github.com/valkyrie-fnd/valkyrie/blob/main/LICENSE.md"},"title":"Valkyrie Provider API","version":""},"postman":{"name":"Debit","description":{"content":"Used to debit from account (place bets)","type":"text/plain"},"url":{"path":["providers","evolution","debit"],"host":["{{baseUrl}}"],"query":[{"disabled":false,"description":{"content":"(Required) Api token","type":"text/plain"},"key":"authToken","value":""}],"variable":[]},"header":[{"key":"Content-Type","value":"application/json"},{"key":"Accept","value":"application/json"}],"method":"POST","body":{"mode":"raw","raw":"\"\"","options":{"raw":{"language":"json"}}}}}
 sidebar_class_name: "post api-method"
-info_path: docs/providerDoc/valkyrie-provider-api
+info_path: docs/providerApis/valkyrie-provider-api
 ---
 
 import ApiTabs from "@theme/ApiTabs";
@@ -19,11 +19,11 @@ import SchemaTabs from "@theme/SchemaTabs";
 import DiscriminatorTabs from "@theme/DiscriminatorTabs";
 import TabItem from "@theme/TabItem";
 
-## Credit
+## Debit
 
 
 
-Used to credit user’s account (settle bets)
+Used to debit from account (place bets)
 
 <details style={{"marginBottom":"1rem"}} data-collapsed={false} open={true}><summary style={{}}><strong>Query Parameters</strong></summary><div><ul><ParamsItem className={"paramsItem"} param={{"description":"Api token","in":"query","name":"authToken","required":true,"schema":{"type":"string"}}}></ParamsItem></ul></div></details><div><ApiTabs><TabItem label={"200"} value={"200"}><div>
 

@@ -1,13 +1,13 @@
 ---
-id: rt-promo-refund
-title: "PromoRefund"
-description: "PromoRefund"
-sidebar_label: "PromoRefund"
+id: rt-refund
+title: "Refund"
+description: "Refund"
+sidebar_label: "Refund"
 hide_title: true
 hide_table_of_contents: true
-api: {"description":"PromoRefund","operationId":"RTPromoRefund","parameters":[{"description":"API Key","in":"header","name":"Authorization","required":true,"schema":{"type":"string"}}],"requestBody":{"$ref":"#/components/requestBodies/RTPromoBuyinReq"},"responses":{"200":{"description":"OK","content":{"application/json":{"schema":{"properties":{"balance":{"properties":{"bonus":{"type":"number"},"cash":{"type":"number"}},"type":"object"},"currency":{"type":"string"},"error":{"properties":{"code":{"enum":[100,200,201,301,302,303,304,305,306,400,401,500,501],"type":"integer","x-enum-varnames":["APIAuthError","InvalidInput","GenericError","NotAuthorized","UserNotFound","BannedUser","InsufficientFunds","InvalidUserCurrency","UserLimitedPlaying","TransactionNotFound","DuplicateTransaction","InternalServerError","UnderMaintenanceMode"]},"message":{"type":"string"}},"type":"object"},"result":{"properties":{"id":{"type":"string"},"stake":{"properties":{"bonus":{"type":"number"},"cash":{"type":"number"}},"type":"object"},"token":{"type":"string"}},"type":"object"},"success":{"type":"boolean"}},"type":"object"}}}},"400":{"description":"Bad Request","content":{"application/json":{"schema":{"properties":{"error":{"properties":{"code":{"enum":[100,200,201,301,302,303,304,305,306,400,401,500,501],"type":"integer","x-enum-varnames":["APIAuthError","InvalidInput","GenericError","NotAuthorized","UserNotFound","BannedUser","InsufficientFunds","InvalidUserCurrency","UserLimitedPlaying","TransactionNotFound","DuplicateTransaction","InternalServerError","UnderMaintenanceMode"]},"message":{"type":"string"}},"type":"object"},"success":{"type":"boolean"}},"type":"object"}}}}},"tags":["Red Tiger"],"method":"post","path":"/providers/redtiger/promo/refund","info":{"contact":{"name":"Valkyrie Foundation"},"description":"This is a interactive Swagger documentation for Valkyrie Provider API","license":{"name":"MIT"},"title":"Valkyrie Provider API","version":""},"postman":{"name":"PromoRefund","description":{"content":"PromoRefund","type":"text/plain"},"url":{"path":["providers","redtiger","promo","refund"],"host":["{{baseUrl}}"],"query":[],"variable":[]},"header":[{"key":"Content-Type","value":"application/json"},{"key":"Accept","value":"application/json"}],"method":"POST","body":{"mode":"raw","raw":"\"\"","options":{"raw":{"language":"json"}}}}}
+api: {"description":"Refund","operationId":"RTRefund","parameters":[{"description":"API Key","in":"header","name":"Authorization","required":true,"schema":{"type":"string"}}],"requestBody":{"$ref":"#/components/requestBodies/RTPromoBuyinReq"},"responses":{"200":{"description":"OK","content":{"application/json":{"schema":{"properties":{"balance":{"properties":{"bonus":{"type":"number"},"cash":{"type":"number"}},"type":"object"},"currency":{"type":"string"},"error":{"properties":{"code":{"enum":[100,200,201,301,302,303,304,305,306,400,401,500,501],"type":"integer","x-enum-varnames":["APIAuthError","InvalidInput","GenericError","NotAuthorized","UserNotFound","BannedUser","InsufficientFunds","InvalidUserCurrency","UserLimitedPlaying","TransactionNotFound","DuplicateTransaction","InternalServerError","UnderMaintenanceMode"]},"message":{"type":"string"}},"type":"object"},"result":{"properties":{"id":{"type":"string"},"stake":{"properties":{"bonus":{"type":"number"},"cash":{"type":"number"}},"type":"object"},"token":{"type":"string"}},"type":"object"},"success":{"type":"boolean"}},"type":"object"}}}},"400":{"description":"Bad Request","content":{"application/json":{"schema":{"properties":{"error":{"properties":{"code":{"enum":[100,200,201,301,302,303,304,305,306,400,401,500,501],"type":"integer","x-enum-varnames":["APIAuthError","InvalidInput","GenericError","NotAuthorized","UserNotFound","BannedUser","InsufficientFunds","InvalidUserCurrency","UserLimitedPlaying","TransactionNotFound","DuplicateTransaction","InternalServerError","UnderMaintenanceMode"]},"message":{"type":"string"}},"type":"object"},"success":{"type":"boolean"}},"type":"object"}}}}},"tags":["Red Tiger"],"method":"post","path":"/providers/redtiger/refund","info":{"contact":{},"description":"The exposed endpoints by the enabled game provider modules.","license":{"name":"MIT","url":"https://github.com/valkyrie-fnd/valkyrie/blob/main/LICENSE.md"},"title":"Valkyrie Provider API","version":""},"postman":{"name":"Refund","description":{"content":"Refund","type":"text/plain"},"url":{"path":["providers","redtiger","refund"],"host":["{{baseUrl}}"],"query":[],"variable":[]},"header":[{"key":"Content-Type","value":"application/json"},{"key":"Accept","value":"application/json"}],"method":"POST","body":{"mode":"raw","raw":"\"\"","options":{"raw":{"language":"json"}}}}}
 sidebar_class_name: "post api-method"
-info_path: docs/providerDoc/valkyrie-provider-api
+info_path: docs/providerApis/valkyrie-provider-api
 ---
 
 import ApiTabs from "@theme/ApiTabs";
@@ -19,11 +19,11 @@ import SchemaTabs from "@theme/SchemaTabs";
 import DiscriminatorTabs from "@theme/DiscriminatorTabs";
 import TabItem from "@theme/TabItem";
 
-## PromoRefund
+## Refund
 
 
 
-PromoRefund
+Refund
 
 <details style={{"marginBottom":"1rem"}} data-collapsed={false} open={true}><summary style={{}}><strong>Header Parameters</strong></summary><div><ul><ParamsItem className={"paramsItem"} param={{"description":"API Key","in":"header","name":"Authorization","required":true,"schema":{"type":"string"}}}></ParamsItem></ul></div></details><div><ApiTabs><TabItem label={"200"} value={"200"}><div>
 

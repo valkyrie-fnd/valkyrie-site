@@ -18,13 +18,5 @@ Optional integrations to proprietary operators' protocols can be handled on a ca
 
 Valkyrie is configurable with respect to providers, operators, logging, tracing and communication timeouts.
 
-For integration testing and kick start purposes, there is an additional project, valkyrie-stubs, avaliable. 
-Valkyrie-stubs contains a mock test bench simulating a boiler plate casino wallet (/genericpam). 
-The valkyrie-stubs wallet publishes services according to Valkyrie OAPI3 PAM client specification, 
-some basic business logic and an in-memory, simple datastore (/memorydatastore). 
-Test benches simulating providers are available in the Valkyrie project itself (/provider/{provider}/test). 
-In other words, Valkyrie project, together with valkyrie-stubs, 
-constitute an environment enabling integration tests of the Valkyrie software in any isolated environment.
-
 The software is available as a Go binary file, packaged in container or as raw code for anyone to compile and use. 
 Valkyrie is recommended to execute within operators' networks but it can optionally be deployed virtually anywhere.
