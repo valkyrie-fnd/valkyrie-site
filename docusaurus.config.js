@@ -4,7 +4,7 @@ const baseUrl = "/";
 const config = {
   title: "Valkyrie",
   tagline: "Open sourcing gaming",
-  url: "https://valkyrie-fnd.github.io/",
+  url: "https://valkyrie.bet/",
   baseUrl: baseUrl,
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
