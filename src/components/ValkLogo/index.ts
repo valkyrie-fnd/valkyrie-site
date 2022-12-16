@@ -1,1 +1,0 @@
-export { ValkLogo } from './valk-logo';

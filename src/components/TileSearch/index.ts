@@ -1,1 +1,0 @@
-export { TileSearch, TileItem } from './tile-search'
