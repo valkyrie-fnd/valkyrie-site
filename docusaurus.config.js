@@ -1,5 +1,3 @@
-require('dotenv').config();
-// @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
 /** @type {import('@docusaurus/types').Config} */
@@ -7,7 +5,7 @@ const config = {
   title: "Valkyrie",
   tagline: "Open sourcing gaming",
   url: "https://valkyrie-fnd.github.io/",
-  baseUrl: process.env.VALK_BASE_URL,
+  baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
@@ -15,7 +13,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "valkyrie-fnd", // Usually your GitHub org/user name.
-  projectName: "valkyrie", // Usually your repo name.
+  projectName: "valkyrie-site", // Usually your repo name.
   deploymentBranch: "gh-pages",
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
