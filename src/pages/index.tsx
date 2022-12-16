@@ -1,7 +1,7 @@
 import React from 'react';
 import GridViewRoundedIcon from '@mui/icons-material/GridViewRounded';
 import WalletRoundedIcon from '@mui/icons-material/WalletRounded';
-import OpenInNewRoundedIcon from '@mui/icons-material/OpenInNewRounded';
+import AssignmentIcon from '@mui/icons-material/Assignment';
 import Layout from '@theme/Layout';
 import styles from './index.module.css';
 import { ValkLogo } from '@site/src/components/ValkLogo';
@@ -23,7 +23,7 @@ export default function MainPage() {
                 An open source platform where Game providers and Gaming operators meet & collaborate
               </h1>
               <h3 className={styles.subHeader}>
-                Always Open Source and free to use, maintained by Valkyrie fnd. Read more about Valkyrie <Link href="./about-us">here</Link>
+                Open Source and free to use, maintained by Valkyrie fnd. Read more about Valkyrie <Link href="./about-us">here</Link>
               </h3>
               <div className={styles.buttons}>
                 <ValkButton
@@ -36,13 +36,13 @@ export default function MainPage() {
                   className={styles.button}
                   startIcon={<WalletRoundedIcon />}
                   href="/docs/wallet/valkyrie-pam-api">
-                  Wallets
+                  Wallet
                 </ValkButton>
                 <ValkButton
                   className={styles.button}
-                  startIcon={<OpenInNewRoundedIcon />}
-                  href="/docs/gamelaunch/valkyrie-operator-api">
-                  Game Launcher
+                  startIcon={<AssignmentIcon />}
+                  href="/docs">
+                  Documentation
                 </ValkButton>
               </div>
             </div>
