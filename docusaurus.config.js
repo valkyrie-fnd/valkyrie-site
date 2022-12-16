@@ -1,5 +1,5 @@
 // Note: type annotations allow type checking and IDEs autocompletion
-const baseUrl = "/valkyrie-site";
+const baseUrl = "/";
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Valkyrie",
@@ -138,7 +138,7 @@ const config = {
           {
             type: "html",
             position: "right",
-            value: `<img class="menu-logo" width="28" src="${baseUrl}/img/Valkyrie-logo-green.svg"/>`
+            value: `<img class="menu-logo" width="28" src="/img/Valkyrie-logo-green.svg"/>`
           }
         ],
       },
