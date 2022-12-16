@@ -5,7 +5,7 @@ const config = {
   title: "Valkyrie",
   tagline: "Open sourcing gaming",
   url: "https://valkyrie-fnd.github.io/",
-  baseUrl: "/",
+  baseUrl: "/valkyrie-site",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
