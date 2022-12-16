@@ -24,7 +24,8 @@ async function downloadRecursive(dest, location) {
   });
   await Promise.all(content.data.map(async dc => {
     if (dc.download_url) {
-      const res = await axios.get(dc.download_url);
+      const res = await axios.get(dc.download_url, { responseType: 'stream' });
+
       await fs.writeFile(path.resolve(dest, dc.name), res.data);
     }
     if (dc.type === "dir") {
