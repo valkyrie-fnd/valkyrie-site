@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://valkyrie.bet/updates</id>
     <title>Valkyrie Blog</title>
-    <updated>2022-12-16T15:28:29.000Z</updated>
+    <updated>2022-12-19T13:45:53.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://valkyrie.bet/updates"/>
     <subtitle>Valkyrie Blog</subtitle>
@@ -11,7 +11,7 @@
         <title type="html"><![CDATA[Open sourcing valkyrie]]></title>
         <id>/2022/12/opensource</id>
         <link href="https://valkyrie.bet/updates/2022/12/opensource"/>
-        <updated>2022-12-16T15:28:29.000Z</updated>
+        <updated>2022-12-19T13:45:53.000Z</updated>
         <summary type="html"><![CDATA[Valkyrie is now open source]]></summary>
         <content type="html"><![CDATA[<p>Valkyrie is now open source and available to all.</p><p>A milestone reached in december 2022, having the project open sourced.
 Although limited use, hopefully this step will help our visibility and getting more Valkyrie instances running in 2023.</p>]]></content>
