@@ -1,0 +1,17 @@
+{
+  // This file is not used in compilation. It is here just for a nice editor experience.
+  "extends": "@tsconfig/docusaurus/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "moduleResolution": "node",
+    "types": [
+      "node",
+      "@docusaurus/module-type-aliases",
+      "@docusaurus/theme-classic",
+      "@docusaurus/theme-common",
+      "mdx",
+      "docusaurus-theme-openapi-docs"
+    ],
+    "skipLibCheck": false
+  },
+}
