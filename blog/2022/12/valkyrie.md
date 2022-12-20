@@ -9,7 +9,7 @@ authors:
 A couple of minutes ago it was finally released on GitHub and Docker Hub.
 <!--truncate-->
 
-The Valkyrie integration component is alive and free to use. You'll find it [here](https://github.com/valkyrie-fnd).
+The Valkyrie integration component is alive and free to use. You'll find it [here](https://github.com/valkyrie-fnd/valkyrie).
 
 The component is written in Go and constitutes, together with the mock casino operator *valkyrie-stubs*, a kick start kit to enable quick integrations between game providers and gaming operators.
 
