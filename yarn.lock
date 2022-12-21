@@ -1696,7 +1696,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@docusaurus/core@npm:2.2.0, @docusaurus/core@npm:latest":
+"@docusaurus/core@npm:2.2.0, @docusaurus/core@npm:^2.2.0":
   version: 2.2.0
   resolution: "@docusaurus/core@npm:2.2.0"
   dependencies:
@@ -1830,7 +1830,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@docusaurus/module-type-aliases@npm:2.2.0, @docusaurus/module-type-aliases@npm:latest":
+"@docusaurus/module-type-aliases@npm:2.2.0, @docusaurus/module-type-aliases@npm:^2.2.0":
   version: 2.2.0
   resolution: "@docusaurus/module-type-aliases@npm:2.2.0"
   dependencies:
@@ -1989,7 +1989,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@docusaurus/preset-classic@npm:latest":
+"@docusaurus/preset-classic@npm:^2.2.0":
   version: 2.2.0
   resolution: "@docusaurus/preset-classic@npm:2.2.0"
   dependencies:
@@ -5960,9 +5960,9 @@ __metadata:
   dependencies:
     "@algolia/client-search": ^4.9.1
     "@babel/core": ^7.0.0
-    "@docusaurus/core": latest
-    "@docusaurus/module-type-aliases": latest
-    "@docusaurus/preset-classic": latest
+    "@docusaurus/core": ^2.2.0
+    "@docusaurus/module-type-aliases": ^2.2.0
+    "@docusaurus/preset-classic": ^2.2.0
     "@emotion/react": ^11.10.0
     "@emotion/styled": ^11.10.0
     "@mdx-js/react": ^1.6.22
@@ -5976,8 +5976,8 @@ __metadata:
     chalk: ^4.1.2
     clsx: ^1.2.1
     copy-webpack-plugin: ^11.0.0
-    docusaurus-plugin-openapi-docs: ^1.4.5
-    docusaurus-theme-openapi-docs: ^1.4.5
+    docusaurus-plugin-openapi-docs: ^1.5.0
+    docusaurus-theme-openapi-docs: ^1.5.0
     framer-motion: ^6.5.1
     lodash: ^4.17.21
     mustache: ^4.2.0
@@ -5991,9 +5991,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"docusaurus-plugin-openapi-docs@npm:^1.4.5":
-  version: 1.4.5
-  resolution: "docusaurus-plugin-openapi-docs@npm:1.4.5"
+"docusaurus-plugin-openapi-docs@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "docusaurus-plugin-openapi-docs@npm:1.5.0"
   dependencies:
     "@apidevtools/json-schema-ref-parser": ^9.0.9
     "@docusaurus/mdx-loader": ^2.0.1
@@ -6019,13 +6019,13 @@ __metadata:
     xml-formatter: ^2.6.1
   peerDependencies:
     react: ^16.8.4 || ^17.0.0
-  checksum: 3cf4bf0d242c95d1a4539d40e14983b47aa8e43919551c8ea056bb813894ae2d66aa3a31d17e84468c3fa9e3f4328a13b5fb0f6e1bdad43ba1d9d910d095ada3
+  checksum: 903b35b74a7d2438011ecf7bb0434044a9431961305b3bc887683daeed6c178a2f9cd0ae3f12566c3b6965b377275cc02a5681dcd2324465383b2f205b49b554
   languageName: node
   linkType: hard
 
-"docusaurus-theme-openapi-docs@npm:^1.4.5":
-  version: 1.4.5
-  resolution: "docusaurus-theme-openapi-docs@npm:1.4.5"
+"docusaurus-theme-openapi-docs@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "docusaurus-theme-openapi-docs@npm:1.5.0"
   dependencies:
     "@docusaurus/theme-common": ^2.0.1
     "@mdx-js/react": ^1.6.21
@@ -6035,7 +6035,7 @@ __metadata:
     buffer: ^6.0.3
     clsx: ^1.1.1
     crypto-js: ^4.1.1
-    docusaurus-plugin-openapi-docs: ^1.4.5
+    docusaurus-plugin-openapi-docs: ^1.5.0
     file-saver: ^2.0.5
     immer: ^9.0.7
     lodash: ^4.17.20
@@ -6052,7 +6052,7 @@ __metadata:
   peerDependencies:
     react: ^16.8.4 || ^17.0.0
     react-dom: ^16.8.4 || ^17.0.0
-  checksum: 5af847086e95d537eeef10e9932e245cfeb0c05783c5709cbbac012dc289273472ad9fb8648db97aaebc87e284325886221aaa32b9c44c0ced86e397c4cdc643
+  checksum: 6aa8acd5bca19c561e840232fd2a3d4ea4959a3e3b5817f25fa716177689440e88dc7ea3b473b9496d72af6ff9034c7c6b92413a44c675e0d425b7cda495cc63
   languageName: node
   linkType: hard
 

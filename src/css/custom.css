@@ -98,3 +98,7 @@
 .tabs__item span {
   color: var(--ifm-color-content);
 }
+
+.details__request-summary h4 {
+  color: var(--ifm-color-base);
+}
