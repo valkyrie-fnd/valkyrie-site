@@ -2,27 +2,16 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://valkyrie.bet/updates</id>
     <title>Valkyrie Blog</title>
-    <updated>2022-12-20T15:30:00.000Z</updated>
+    <updated>2022-12-21T09:05:14.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://valkyrie.bet/updates"/>
     <subtitle>Valkyrie Blog</subtitle>
     <icon>https://valkyrie.bet/img/favicon.ico</icon>
     <entry>
-        <title type="html"><![CDATA[...annnd there it goes!]]></title>
-        <id>/2022/12/valkyrie</id>
-        <link href="https://valkyrie.bet/updates/2022/12/valkyrie"/>
-        <updated>2022-12-20T15:30:00.000Z</updated>
-        <summary type="html"><![CDATA[Valkyrie - the free, open source game aggregator is let loose!]]></summary>
-        <content type="html"><![CDATA[<p>A couple of minutes ago it was finally released on GitHub and Docker Hub.</p><p>The Valkyrie integration component is alive and free to use. You'll find it <a href="https://github.com/valkyrie-fnd/valkyrie" target="_blank" rel="noopener noreferrer">here</a>.</p><p>The component is written in Go and constitutes, together with the mock casino operator <em>valkyrie-stubs</em>, a kick start kit to enable quick integrations between game providers and gaming operators.</p><p>Feel free to clone and start exploring the stuff! If you are not comfortable with messing around with Go source code, binaries are available in the repo.</p><p>Do you prefer to launch a readily built container image, it's available at <a href="https://hub.docker.com/u/valkyriefnd" target="_blank" rel="noopener noreferrer">Docker Hub</a> together with Helm stuff to ease up Kubernetes adventures.</p><p>Have fun!</p>]]></content>
-        <author>
-            <name>Klas</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[Open sourcing valkyrie]]></title>
         <id>/2022/12/opensource</id>
         <link href="https://valkyrie.bet/updates/2022/12/opensource"/>
-        <updated>2022-12-20T14:58:32.000Z</updated>
+        <updated>2022-12-21T09:05:14.000Z</updated>
         <summary type="html"><![CDATA[Valkyrie is now open source]]></summary>
         <content type="html"><![CDATA[<p>Valkyrie is now open source and available to all.</p><p>A milestone reached in december 2022, having the project open sourced.
 Although limited use, hopefully this step will help our visibility and getting more Valkyrie instances running in 2023.</p>]]></content>
@@ -34,11 +23,22 @@ Although limited use, hopefully this step will help our visibility and getting m
         <title type="html"><![CDATA[What's Valkyrie about?]]></title>
         <id>/2022/12/what</id>
         <link href="https://valkyrie.bet/updates/2022/12/what"/>
-        <updated>2022-12-20T14:58:32.000Z</updated>
+        <updated>2022-12-21T09:05:14.000Z</updated>
         <summary type="html"><![CDATA[What's the intention. And for whom?]]></summary>
         <content type="html"><![CDATA[<p>Valkyrie - what's it all about, who would want to use it and for what?</p><p>As can be somewhat decoded from this website, the Valkyrie initiative is about decoupling the iGaming market and present free alternatives for integration of game providers and gaming operators.</p><p>At present, two Valkyrie support components - the <em>valkyrie-stubs</em> and <em>valkyrie-event-adapter</em> - are published. The main valkyrie integrator component will follow shortly.
 The valkyrie-stubs component simulates a standard gaming operator wallet implementing the standard API described in this site, while the valkyrie-event-adapter component offers some game client interaction support.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="gaming-operator">Gaming Operator<a class="hash-link" href="#gaming-operator" title="Direct link to heading">​</a></h2><p>If you're an operator you simply integrate the Valkyrie wallet server described <a href="https://valkyrie.bet/docs/wallet/valkyrie-pam-api" target="_blank" rel="noopener noreferrer">here</a> and get access to all game providers already integrated with Valkyrie. It's possible to create proprietary integrations to your wallet server as well using the vPlugin mechanism.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="game-provider">Game Provider<a class="hash-link" href="#game-provider" title="Direct link to heading">​</a></h2><p>For providers Valkyrie offers direct exposure to gaming operators for free. All you need to do to offer your products to operators connected to Valkyrie is to make sure your RGS integrates with Valkyrie <a href="https://valkyrie.bet/docs/providerApis/valkyrie-provider-api" target="_blank" rel="noopener noreferrer">provider API</a> by implementing (or have somebody doing it) an RGS specific Valkyrie module. In addition, there are iGaming aggregators who already support Valkyrie integration, so if you prefer exposure via an aggregator, this might also be an option. New provider Valkyrie integrations will join the present ones in an open source GitHub repo.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="aggregator">Aggregator<a class="hash-link" href="#aggregator" title="Direct link to heading">​</a></h2><p>Aggregators, keen on easy plug'n spin connections to operators as well as providers, may find the Valkyrie components useful too. Integrations to aggregator platforms are easily implemented using Valkyrie standardized wallet as well as customized provider APIs.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="help">Help<a class="hash-link" href="#help" title="Direct link to heading">​</a></h2><p>If you don't want to fiddle around with your present system, or you feel you'd rather have somebody creating an integration for you rather than doing it yourself, integration assistance will shortly be offered as professional services costing you a few pennies. Once you're done with that, everything is free to use!
 Keep an eye on our <a href="https://valkyrie.bet/about-us" target="_blank" rel="noopener noreferrer">About us</a> section.</p>]]></content>
+        <author>
+            <name>Klas</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[...annnd there it goes!]]></title>
+        <id>/2022/12/valkyrie</id>
+        <link href="https://valkyrie.bet/updates/2022/12/valkyrie"/>
+        <updated>2022-12-20T15:30:00.000Z</updated>
+        <summary type="html"><![CDATA[Valkyrie - the free, open source game aggregator is let loose!]]></summary>
+        <content type="html"><![CDATA[<p>A couple of minutes ago it was finally released on GitHub and Docker Hub.</p><p>The Valkyrie integration component is alive and free to use. You'll find it <a href="https://github.com/valkyrie-fnd/valkyrie" target="_blank" rel="noopener noreferrer">here</a>.</p><p>The component is written in Go and constitutes, together with the mock casino operator <em>valkyrie-stubs</em>, a kick start kit to enable quick integrations between game providers and gaming operators.</p><p>Feel free to clone and start exploring the stuff! If you are not comfortable with messing around with Go source code, binaries are available in the repo.</p><p>Do you prefer to launch a readily built container image, it's available at <a href="https://hub.docker.com/u/valkyriefnd" target="_blank" rel="noopener noreferrer">Docker Hub</a> together with Helm stuff to ease up Kubernetes adventures.</p><p>Have fun!</p>]]></content>
         <author>
             <name>Klas</name>
         </author>
