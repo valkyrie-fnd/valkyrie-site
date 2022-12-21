@@ -5,7 +5,6 @@ const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
 const { Octokit } = require('octokit');
 const axios = require("axios");
-require('dotenv').config();
 /**
  * @typedef {Object} ProviderConf
  * @property {number} id - id of provider
@@ -14,11 +13,11 @@ require('dotenv').config();
  * @property {string} description - short description of provider
  * @property {string} url - relative url to route to provider
  */
-const octokit = new Octokit({ auth: process.env.GH_TOKEN });
+const octokit = new Octokit();
 
 async function downloadRecursive(dest, location) {
   const content = await octokit.rest.repos.getContent({
-    owner: "four-fingers",
+    owner: "valkyrie-fnd",
     repo: "valkyrie",
     path: location
   });
@@ -56,7 +55,7 @@ const providerDataPlugin = async function (context, opts) {
     if (!fsSync.existsSync("tmp-provider"))
       await fs.mkdir("tmp-provider");
     const repoContent = await octokit.rest.repos.getContent({
-      owner: "four-fingers",
+      owner: "valkyrie-fnd",
       repo: "valkyrie",
       path: "provider"
     });

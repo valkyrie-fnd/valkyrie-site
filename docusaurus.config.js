@@ -131,7 +131,7 @@ const config = {
             position: "right",
           },
           {
-            href: "https://github.com/valkyrie-fnd",
+            href: "https://github.com/valkyrie-fnd/valkyrie",
             label: "GITHUB",
             position: "right",
           },

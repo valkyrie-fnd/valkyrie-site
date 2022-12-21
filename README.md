@@ -38,4 +38,4 @@ yarn gen-provider-docs
 This command generates md documentation from provider modules inside Valkyrie. Requires Valkyrie to be present on the system
 ### Deployment
 
-Update version in `package.json` and then push a tag with the same version number with the format `v1.2.3`. This will trigger a build of the site and push it to GCS.
+Upon merge to main, the site is published on github pages. [valkyrie.bet](valkyrie.bet)
