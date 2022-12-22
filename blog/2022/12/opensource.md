@@ -1,8 +1,9 @@
 ---
 title: Open sourcing valkyrie
 description: Valkyrie is now open source
+date: 2022-12-16T16:30
 authors:
-  - name: Gustav Stensson
+  - name: Gustav
 ---
 
 Valkyrie is now open source and available to all.
