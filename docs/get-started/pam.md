@@ -6,7 +6,7 @@ sidebar_position: 5
 ### PAM
 A PAM is the system the operator uses to keep track of the players' accounts and balances. Also referred to as wallet.
 ### Wallets
-When configuring Valkyrie you need to specify a compatible PAM(player account management) also called wallets.
+When configuring Valkyrie you need to specify a compatible wallet.
 
 It is the system the operator uses to keep track of the players accounts and balance, why it is also referenced as wallets.
 
