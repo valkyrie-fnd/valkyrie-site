@@ -4,7 +4,7 @@ import React from 'react'
 import WhatIs from './_what-is.mdx';
 import ThePoint from './_the-point.mdx';
 import ContactUs from './_contact-us.mdx';
-import styles from './about-us.module.css';
+import styles from './about.module.css';
 import MDXContent from '@theme/MDXContent';
 
 export default function AboutUs() {
@@ -13,7 +13,7 @@ export default function AboutUs() {
       <main className={`container  ${styles.mainAbout}`} >
         <div className={styles.paragraphWrapper}>
           <h1 className={`${styles.header}`}>
-            About us
+            About Valkyrie
           </h1>
           <article className={styles.container}>
             <MDXContent >

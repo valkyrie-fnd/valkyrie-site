@@ -23,7 +23,7 @@ export default function MainPage() {
                 An open source platform where Game providers and Gaming operators meet & collaborate
               </h1>
               <h3 className={styles.subHeader}>
-                Open Source and free to use, maintained by Valkyrie fnd. Read more about Valkyrie <Link href="./about-us">here</Link>
+                Open Source and free to use, maintained by Valkyrie fnd. Read more about Valkyrie <Link href="./about">here</Link>
               </h3>
               <div className={styles.buttons}>
                 <ValkButton

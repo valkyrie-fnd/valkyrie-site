@@ -111,8 +111,8 @@ const config = {
         },
         items: [
           {
-            label: "ABOUT US",
-            to: "/about-us",
+            label: "ABOUT",
+            to: "/about",
             position: "right",
           },
           {
@@ -152,8 +152,8 @@ const config = {
         },
         links: [
           {
-            label: "ABOUT US",
-            to: "/about-us",
+            label: "ABOUT",
+            to: "/about",
           },
           {
             label: "GAME PROVIDERS",
