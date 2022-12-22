@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[2535],{45641:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Open sourcing valkyrie","permalink":"/updates/2022/12/opensource"},{"title":"What\'s Valkyrie about?","permalink":"/updates/2022/12/what"},{"title":"...annnd there it goes!","permalink":"/updates/2022/12/valkyrie"}]}')}}]);
