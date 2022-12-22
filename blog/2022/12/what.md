@@ -1,6 +1,7 @@
 ---
 title: What's Valkyrie about?
 description: What's the intention. And for whom?
+date: 2022-12-18T12:00
 authors:
   - name: Klas
 ---
