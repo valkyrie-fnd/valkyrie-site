@@ -24,4 +24,4 @@ Aggregators, keen on easy plug'n spin connections to operators as well as provid
 
 ## Help
 If you don't want to fiddle around with your present system, or you feel you'd rather have somebody creating an integration for you rather than doing it yourself, integration assistance will shortly be offered as professional services costing you a few pennies. Once you're done with that, everything is free to use!
-Keep an eye on our [About us](https://valkyrie.bet/about) section.
+Keep an eye on our [About page](https://valkyrie.bet/about) section.
