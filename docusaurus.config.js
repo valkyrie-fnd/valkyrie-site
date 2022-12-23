@@ -15,7 +15,7 @@ const config = {
   organizationName: "valkyrie-fnd", // Usually your GitHub org/user name.
   projectName: "valkyrie-site", // Usually your repo name.
   deploymentBranch: "gh-pages",
-  scripts: [{src: 'https://plausible.io/js/script.js', defer: true, 'data-domain': 'valkyrie.bet'}],
+  scripts: [{ src: 'https://plausible.io/js/script.js', defer: true, 'data-domain': 'valkyrie.bet' }],
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
@@ -71,8 +71,6 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          showLastUpdateTime: true,
-          showLastUpdateAuthor: true,
           path: "docs",
           routeBasePath: "docs",
           docLayoutComponent: "@theme/DocPage",
