@@ -3,13 +3,13 @@ title: Logging and tracing
 sidebar_position: 4
 ---
 
-### Logging
+## Logging
 Features:
 - Structured logging JSON
 - Optional request/response logging
 - Trace information attached if available
 
-### Metrics
+## Metrics
 Simple metrics are available at http://localhost:8084/monitoring/metrics
 
 ### Tracing
@@ -19,7 +19,7 @@ Simple metrics are available at http://localhost:8084/monitoring/metrics
 | [Zipkin](https://zipkin.io/)                         | [github](https://github.com/open-telemetry/opentelemetry-go/tree/main/exporters/zipkin) |
 | [Google Cloud Trace](https://cloud.google.com/trace) | [github](https://github.com/GoogleCloudPlatform/opentelemetry-operations-go)            |
 
-### Running locally with Jaeger for tracing
+## Running locally with Jaeger for tracing
 1. Start Jaeger in docker
     ```bash
     docker run -d --name jaeger \
@@ -35,13 +35,13 @@ Simple metrics are available at http://localhost:8084/monitoring/metrics
     TRACING_SERVICE_NAME=valkyrie
     ```
 
-### Profiling
+## Profiling
 To enable the profiling endpoint set the env variable `PPROF=true` and use the [pprof tool](https://github.com/google/pprof)
 to extract runtime data:
 ```bash
 go tool pprof 'localhost:8084/debug/pprof/profile?seconds=25'
 ```
-### Configuration
+## Configuration
 
 ```yaml
 logging:

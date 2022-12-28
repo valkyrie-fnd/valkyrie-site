@@ -36,7 +36,7 @@ dependent on the environment:
 - most likely some sort of IP whitelisting for each provider
 - NAT gateway for egress Valkyrie traffic providing a static IP for provider whitelisting
 
-### Using GCP for surrounding features
+## Using GCP for surrounding features
 1. SSL: [google-managed ssl for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/managed-certs)
 2. IP whitelisting: [Google Cloud Armor Ingress security policy](https://cloud.google.com/kubernetes-engine/docs/how-to/ingress-features#cloud_armor)
 3. Static IP for outgoing traffic: [Set up Cloud NAT with GKE](https://cloud.google.com/nat/docs/gke-example)
