@@ -45,33 +45,47 @@ dependent on the environment:
 
 Show the supported values that can be configured:
 
-`helm show values path/to/helm`
+```shell
+helm show values path/to/helm
+```
 
 Simulate an install using the `--dry-run` flag and provide a few explicit values:
 
-`helm install my-valkyrie path/to/helm --set image.repository=<container repo> --set image.tag=<version> --dry-run`
+```shell
+helm install my-valkyrie path/to/helm --set image.repository=<container repo> --set image.tag=<version> --dry-run
+```
 
 Install using a user provided values file (`-f <valuesfile>`):
 
-`helm install my-valkyrie path/to/helm -f <values-file>`
+```
+helm install my-valkyrie path/to/helm -f <values-file>
+```
 
 ## Packaging
 
 Package the chart:
 
-`helm package path/to/helm`
+```shell
+helm package path/to/helm
+```
 
 Push the packaged chart to repo:
 
-`helm push valkyrie-0.1.0.tgz oci://oci-repo`
+```shell
+helm push valkyrie-0.1.0.tgz oci://oci-repo
+```
 
 You can now access the chart using the OCI registry:
 
-`helm show readme oci://oci-repo/valkyrie`
+```shell
+helm show readme oci://oci-repo/valkyrie
+```
 
 ## Troubleshooting
 
 Render the k8s resources produced by the chart:
 
-`helm template path/to/helm --debug`
+```shell
+helm template path/to/helm --debug
+```
 
