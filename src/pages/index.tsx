@@ -35,7 +35,7 @@ export default function MainPage() {
                 <ValkButton
                   className={styles.button}
                   startIcon={<WalletRoundedIcon />}
-                  href="/docs/wallet/valkyrie-pam-api">
+                  href="/docs/wallet/valkyrie-pam/valkyrie-pam-api">
                   Wallet
                 </ValkButton>
                 <ValkButton

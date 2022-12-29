@@ -14,7 +14,7 @@ The software can be downloaded as either a Go binary, container image or you can
 Operational and configuration instructions - plus other things to think of - are found in the subsections of this page.
 
 For integration testing and kick start purposes, there is an additional project, [valkyrie-stubs](https://github.com/valkyrie-fnd/valkyrie-stubs), available. 
-Valkyrie-stubs contains a mock test bench simulating a boiler plate casino wallet [generic pam](/docs/wallet/valkyrie-pam-api). 
+Valkyrie-stubs contains a mock test bench simulating a boiler plate casino wallet [generic pam](/docs/wallet/valkyrie-pam/valkyrie-pam-api). 
 The valkyrie-stubs wallet publishes services according to Valkyrie OAPI3 PAM client specification, 
 some basic business logic and an in-memory, [simple datastore](https://github.com/valkyrie-fnd/valkyrie-stubs/tree/main/memorydatastore). 
 Test benches simulating providers are available in the [Valkyrie project itself](https://github.com/valkyrie-fnd/valkyrie/tree/main/provider) 
