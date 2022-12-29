@@ -72,13 +72,13 @@ helm package path/to/helm
 Push the packaged chart to repo:
 
 ```shell
-helm push valkyrie-0.1.0.tgz oci://oci-repo
+helm push valkyrie-chart-0.1.0.tgz oci://oci-repo
 ```
 
 You can now access the chart using the OCI registry:
 
 ```shell
-helm show readme oci://oci-repo/valkyrie
+helm show readme oci://oci-repo/valkyrie-chart
 ```
 
 ## Troubleshooting

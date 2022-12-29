@@ -18,6 +18,5 @@ docker run -v /absolute/path/config.yml:/app/config.yml valkyrie -config config.
 ### From docker hub
 
 ```shell
-docker pull valkyriefnd/valkyrie
 docker run -v /absolute/path/config.yml:/app/config.yml valkyriefnd/valkyrie -config config.yml
 ```
