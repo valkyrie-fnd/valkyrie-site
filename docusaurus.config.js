@@ -15,7 +15,13 @@ const config = {
   organizationName: "valkyrie-fnd", // Usually your GitHub org/user name.
   projectName: "valkyrie-site", // Usually your repo name.
   deploymentBranch: "gh-pages",
-  scripts: [{ src: 'https://plausible.io/js/script.js', defer: true, 'data-domain': 'valkyrie.bet' }],
+  scripts: [
+    {
+      src: "https://s.valkyriebet.workers.dev/v/script.js",
+      defer: true,
+      "data-domain": "valkyrie.bet",
+    },
+  ],
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
@@ -27,10 +33,10 @@ const config = {
     [
       "./src/plugins/provider-docs-plugin",
       {
-        id: 'provider-docs-plugin',
+        id: "provider-docs-plugin",
         include: ".*\\.(mdx|md)$",
         excludeDirs: ["internal", "docs"],
-      }
+      },
     ],
     [
       "./src/plugins/provider-data-plugin",
@@ -54,13 +60,14 @@ const config = {
             outputDir: "docs/gamelaunch",
           },
           providerApis: {
-            specPath: "../valkyrie/provider/docs/generated/provider_swagger.yaml",
+            specPath:
+              "../valkyrie/provider/docs/generated/provider_swagger.yaml",
             outputDir: "docs/providerApis",
             sidebarOptions: {
               groupPathsBy: "tag",
               categoryLinkSource: "tag",
             },
-          }
+          },
         },
       },
     ],
@@ -75,16 +82,21 @@ const config = {
           routeBasePath: "docs",
           docLayoutComponent: "@theme/DocPage",
           docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi-docs
-          async sidebarItemsGenerator({ defaultSidebarItemsGenerator, ...args }) {
+          async sidebarItemsGenerator({
+            defaultSidebarItemsGenerator,
+            ...args
+          }) {
             const sidebarItems = await defaultSidebarItemsGenerator(args);
-            const newItems = sidebarItems.filter(i => i.label !== "providerApis");
+            const newItems = sidebarItems.filter(
+              (i) => i.label !== "providerApis"
+            );
             newItems.push({
               type: "category",
               label: "Provider API",
-              items: require("./docs/providerApis/sidebar.js")
+              items: require("./docs/providerApis/sidebar.js"),
             });
             return newItems;
-          }
+          },
         },
         blog: {
           routeBasePath: "updates",
@@ -137,8 +149,8 @@ const config = {
           {
             type: "html",
             position: "right",
-            value: `<img class="menu-logo" width="28" src="/img/Valkyrie-logo-green.svg"/>`
-          }
+            value: `<img class="menu-logo" width="28" src="/img/Valkyrie-logo-green.svg"/>`,
+          },
         ],
       },
       metadata: [{ name: "robots", content: "noindex" }],
@@ -176,9 +188,7 @@ const config = {
         disableSwitch: true,
       },
     }),
-  stylesheets: [
-    "https://fonts.googleapis.com/css2?family=Bai+Jamjuree"
-  ],
+  stylesheets: ["https://fonts.googleapis.com/css2?family=Bai+Jamjuree"],
   themes: ["docusaurus-theme-openapi-docs"],
 };
 
