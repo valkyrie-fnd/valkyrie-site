@@ -20,6 +20,7 @@ const config = {
       src: "https://s.valkyriebet.workers.dev/v/script.js",
       defer: true,
       "data-domain": "valkyrie.bet",
+      "data-api": "https://s.valkyriebet.workers.dev/v/event",
     },
   ],
   // Even if you don't use internalization, you can use this field to set useful
