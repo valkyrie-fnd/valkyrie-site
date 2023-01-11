@@ -29,7 +29,7 @@ pam:
 #### VPlugin
 It is also possible to have the PAM implementation in a separate executable using [Hashicorp go-plugin](https://github.com/hashicorp/go-plugin).
 
-The interface the plugin needs to implement can be found [here](https://github.com/valkyrie-fnd/valkyrie/blob/main/pam/vplugin/client.go#L11). 
+Read more about VPlugin [here](/docs/wallet/vplugin/vplugin-introduction) 
 
 You set the following config to use a pam as vplugin:
 ```yaml
