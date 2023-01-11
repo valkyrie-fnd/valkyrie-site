@@ -15,7 +15,8 @@ installed from there directly by Helm:
 helm install valkyrie oci://docker.io/valkyriefnd/valkyrie-chart -v values.yaml
 ```
 
-The above command will install Valkyrie in the current Kubernetes cluster your configured `values.yaml`.
+The above command will install Valkyrie in the current Kubernetes cluster according to the configuration specified in 
+`values.yaml`.
 
 For a more detailed example please follow the tutorial below.
 
