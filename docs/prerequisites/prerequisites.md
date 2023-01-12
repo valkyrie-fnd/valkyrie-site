@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+description: Before it's time to start you need an agreement with each specific provider
 ---
 # Prerequisites
 

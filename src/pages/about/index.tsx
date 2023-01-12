@@ -9,7 +9,7 @@ import MDXContent from '@theme/MDXContent';
 
 export default function AboutUs() {
   return (
-    <Layout>
+    <Layout title="About" description="What is Valkyrie?">
       <main className={`container  ${styles.mainAbout}`} >
         <div className={styles.paragraphWrapper}>
           <h1 className={`${styles.header}`}>
