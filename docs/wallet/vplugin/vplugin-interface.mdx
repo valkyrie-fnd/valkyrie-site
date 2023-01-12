@@ -1,0 +1,39 @@
+---
+id: vplugin-interface
+title: VPlugin interface
+sidebar_label: VPlugin interface
+description: "The interface that the plugin needs to implement"
+sidebar_position: 2
+---
+
+`vplugin.PAM` is the plugin interface you need to implement.
+
+```go
+package vplugin
+
+type PluginControl interface {
+	// Init passes configuration to plugins which are expected to report
+	// any startup issues as errors.
+	Init(PluginInitConfig) error
+}
+
+// PamClient Interface describing available PAM operations. The implementing plugins
+// are expected to fulfill this interface.
+type PAM interface {
+	// GetSession Return session
+	GetSession(pam.GetSessionRequest) *pam.SessionResponse
+	// RefreshSession returns a new session token
+	RefreshSession(pam.RefreshSessionRequest) *pam.SessionResponse
+	// GetBalance get balance from PAM
+	GetBalance(pam.GetBalanceRequest) *pam.BalanceResponse
+	// GetTransactions get transactions from pam
+	GetTransactions(pam.GetTransactionsRequest) *pam.GetTransactionsResponse
+	// AddTransaction returns transactionId and balance. When transaction fails balance
+	// can still be returned. On failure error will be returned
+	AddTransaction(pam.AddTransactionRequest) *pam.AddTransactionResponse
+	// GetGameRound gets gameRound from PAM
+	GetGameRound(pam.GetGameRoundRequest) *pam.GameRoundResponse
+
+	PluginControl
+}
+```

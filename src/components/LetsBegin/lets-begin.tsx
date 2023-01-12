@@ -16,7 +16,7 @@ export function LetsBegin() {
         <ValkButton startIcon={<AssignmentIcon />} href="/docs">
           Documentation
         </ValkButton>
-        <ValkButton startIcon={<WalletRoundedIcon />} href="/docs/wallet/valkyrie-pam-api">
+        <ValkButton startIcon={<WalletRoundedIcon />} href="/docs/wallet/valkyrie-pam/valkyrie-pam-api">
           Wallet
         </ValkButton>
       </div>

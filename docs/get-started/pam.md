@@ -12,13 +12,13 @@ It is the system the operator uses to keep track of the players accounts and bal
 
 Valkyrie is in essence an integration between the operator's wallet implementation and the provider's API.
 
-Available wallets in Valkyrie can be found [here](/docs/wallet/valkyrie-pam-api).
+Available wallets in Valkyrie can be found [here](/docs/wallet/valkyrie-pam/valkyrie-pam-api).
 
 ## Configuration
 Specify what PAM to use in the configuration. Each PAM has their own set of configuration fields. 
 
 #### Generic Pam
-If you have PAM that implements the [Valkyrie PAM API](/docs/wallet/valkyrie-pam-api) you can set the following configuration
+If you have PAM that implements the [Valkyrie PAM API](/docs/wallet/valkyrie-pam/valkyrie-pam-api) you can set the following configuration
 
 ```yaml
 pam:
@@ -29,7 +29,7 @@ pam:
 #### VPlugin
 It is also possible to have the PAM implementation in a separate executable using [Hashicorp go-plugin](https://github.com/hashicorp/go-plugin).
 
-The interface the plugin needs to implement can be found [here](https://github.com/valkyrie-fnd/valkyrie/blob/main/pam/vplugin/client.go#L11). 
+Read more about VPlugin [here](/docs/wallet/vplugin/vplugin-introduction) 
 
 You set the following config to use a pam as vplugin:
 ```yaml

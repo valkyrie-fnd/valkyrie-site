@@ -1,0 +1,59 @@
+---
+id: vplugin-setup
+title: Usage
+sidebar_label: Usage
+description: "Vplugin usage"
+sidebar_position: 1
+---
+You need to register gobs from valkyrie
+```go
+// Need to register types used for coms
+vplugin.RegisterGobs()
+```
+
+
+In the plugin main method you need to setup a map of plugins. `YourPlugin` needs to implement the `vplugin.PAM` interface.
+```go
+// pluginName needs to match "type" from configuration
+var pluginMap = map[string]plugin.Plugin{
+  "pluginName": &vplugin.VPlugin{Impl: YourPlugin{}},
+}
+```
+And then serve the plugin. 
+
+```go
+plugin.Serve(&plugin.ServeConfig{
+  HandshakeConfig: handshakeConfig,
+  Plugins:         pluginMap,
+})
+```
+:::tip
+The `plugin.ServeConfig` can also take a Logger. Read hashicorp/go-plugin documentation for more information.
+:::
+
+```go
+package main
+
+import(
+  "github.com/hashicorp/go-plugin"
+  "github.com/valkyrie-fnd/valkyrie/pam/vplugin"
+)
+var handshakeConfig = plugin.HandshakeConfig{
+  ProtocolVersion:  1,
+  MagicCookieKey:   vplugin.MagicCookieKey,
+  MagicCookieValue: vplugin.MagicCookieValue,
+}
+func main(){
+  vplugin.RegisterGobs()
+  // pluginMap is the map of plugins we can dispense.
+  // pluginName needs to match "type" from configuration
+  var pluginMap = map[string]plugin.Plugin{
+    "pluginName": &vplugin.VPlugin{Impl: YourPlugin{}},
+  }
+
+  plugin.Serve(&plugin.ServeConfig{
+    HandshakeConfig: handshakeConfig,
+    Plugins:         pluginMap,
+  })
+}
+```
