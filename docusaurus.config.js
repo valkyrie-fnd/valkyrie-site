@@ -61,6 +61,7 @@ const config = {
             outputDir: "docs/gamelaunch",
           },
           providerApis: {
+            template: "./markdown.template.mustache",
             specPath:
               "../valkyrie/provider/docs/generated/provider_swagger.yaml",
             outputDir: "docs/providerApis",
