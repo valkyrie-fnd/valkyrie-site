@@ -154,7 +154,6 @@ const config = {
           },
         ],
       },
-      metadata: [{ name: "robots", content: "noindex" }],
       footer: {
         logo: {
           width: 28,
