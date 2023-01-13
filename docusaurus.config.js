@@ -60,16 +60,6 @@ const config = {
             specPath: "../valkyrie/provider/docs/operator_api.yml",
             outputDir: "docs/gamelaunch",
           },
-          providerApis: {
-            template: "./markdown.template.mustache",
-            specPath:
-              "../valkyrie/provider/docs/generated/provider_swagger.yaml",
-            outputDir: "docs/providerApis",
-            sidebarOptions: {
-              groupPathsBy: "tag",
-              categoryLinkSource: "tag",
-            },
-          },
         },
       },
     ],
@@ -82,23 +72,9 @@ const config = {
         docs: {
           path: "docs",
           routeBasePath: "docs",
+          sidebarPath: require.resolve("./sidebars.js"),
           docLayoutComponent: "@theme/DocPage",
           docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi-docs
-          async sidebarItemsGenerator({
-            defaultSidebarItemsGenerator,
-            ...args
-          }) {
-            const sidebarItems = await defaultSidebarItemsGenerator(args);
-            const newItems = sidebarItems.filter(
-              (i) => i.label !== "providerApis"
-            );
-            newItems.push({
-              type: "category",
-              label: "Provider API",
-              items: require("./docs/providerApis/sidebar.js"),
-            });
-            return newItems;
-          },
         },
         blog: {
           routeBasePath: "updates",
