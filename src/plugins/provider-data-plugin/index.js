@@ -13,7 +13,7 @@ const axios = require("axios");
  * @property {string} description - short description of provider
  * @property {string} url - relative url to route to provider
  */
-const octokit = new Octokit();
+const octokit = new Octokit({ auth: process.env.GH_TOKEN });
 
 async function downloadRecursive(dest, location) {
   const content = await octokit.rest.repos.getContent({
