@@ -36,7 +36,7 @@ You set the following config to use a pam as vplugin:
 ```yaml
 pam:
   name: vplugin # Name should be set to "vplugin"
-  pluginPath: path/to/plugin-executable # path to the plugin
+  plugin_path: path/to/plugin-executable # path to the plugin
   type: pluginName # name of the plugin, the key in the plugin map.
   # Any other configuration set here will be forwarded to the pam plugin in a map[string]any
   plugin_setting: "configValue"
