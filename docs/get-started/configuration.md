@@ -1,5 +1,6 @@
 ---
 title: Configuration
+description: Configuration specification when launching Valkyrie
 sidebar_position: 1
 ---
 

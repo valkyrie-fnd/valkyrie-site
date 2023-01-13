@@ -1,5 +1,6 @@
 ---
 id: intro
+description: An open source game aggregator written in Go
 sidebar_position: 1
 slug: /
 ---

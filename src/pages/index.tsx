@@ -12,7 +12,7 @@ import { HtmlClassNameProvider } from '@docusaurus/theme-common';
 export default function MainPage() {
   return (
     <HtmlClassNameProvider className='main-page'>
-      <Layout >
+      <Layout title="An open source iGaming aggregator" description="Valkyrie is an open source iGaming aggregator platform to make it easier for operators and providers to collaborate">
         <main>
           <div className={`container ${styles.mainPage}`}>
             <div className={styles.left}>

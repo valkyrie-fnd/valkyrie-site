@@ -10,10 +10,9 @@ import GameProviders from './_game-providers.mdx'
 
 export default function Providers() {
   const { providers } = usePluginData('provider-data-plugin', 'provider-data-plugin') as { providers: TileItem[] };
-  console.log(providers);
 
   return (
-    <Layout>
+    <Layout title="Providers" description='Available game providers on Valkyrie platform'>
       <main>
         <div className={`container ${styles.mainPage}`}>
           <div className={styles.left}>
