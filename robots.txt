@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://valkyrie.bet/sitemap.xml
