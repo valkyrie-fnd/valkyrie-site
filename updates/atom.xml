@@ -2,11 +2,22 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://valkyrie.bet/updates</id>
     <title>Valkyrie Blog</title>
-    <updated>2022-12-20T15:30:00.000Z</updated>
+    <updated>2023-01-20T15:30:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://valkyrie.bet/updates"/>
     <subtitle>Valkyrie Blog</subtitle>
     <icon>https://valkyrie.bet/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Release 0.5.1]]></title>
+        <id>/2023/01/Release 0.5.1</id>
+        <link href="https://valkyrie.bet/updates/2023/01/Release 0.5.1"/>
+        <updated>2023-01-20T15:30:00.000Z</updated>
+        <summary type="html"><![CDATA[A few comments on the release]]></summary>
+        <content type="html"><![CDATA[<p>New minor release is available!</p><p>The 0.5.1 contains a cpl of operational improvements and minor adjustments in the Caleta provider endpoint.</p><ul><li>Improved logging</li><li>Swagger doc generated in dev builds only, to reduce the footprint of production binary</li><li>Bet code and original bet timestamp added in the Caleta interface</li><li>Some adjustments to vplugin - Valkyrie's custom operator adapter</li></ul><p>More is on the way!</p>]]></content>
+        <author>
+            <name>Klas</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[...annnd there it goes!]]></title>
         <id>/2022/12/valkyrie</id>
@@ -41,17 +52,6 @@ Keep an eye on our <a href="https://valkyrie.bet/about" target="_blank" rel="noo
 Although limited use, hopefully this step will help our visibility and getting more Valkyrie instances running in 2023.</p>]]></content>
         <author>
             <name>Gustav</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Release 0.5.1]]></title>
-        <id>/2023/01/Release 0.5.1</id>
-        <link href="https://valkyrie.bet/updates/2023/01/Release 0.5.1"/>
-        <updated>2022-01-20T15:30:00.000Z</updated>
-        <summary type="html"><![CDATA[A few comments on the release]]></summary>
-        <content type="html"><![CDATA[<p>New minor release is available!</p><p>The 0.5.1 contains a cpl of operational improvements and minor adjustments in the Caleta provider endpoint.</p><ul><li>Improved logging</li><li>Swagger doc generated in dev builds only, to reduce the footprint of production binary</li><li>Bet code and original bet timestamp added in the Caleta interface</li><li>Some adjustments to vplugin - Valkyrie's custom operator adapter</li></ul><p>More is on the way!</p>]]></content>
-        <author>
-            <name>Klas</name>
         </author>
     </entry>
 </feed>

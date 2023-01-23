@@ -4,10 +4,18 @@
         <title>Valkyrie Blog</title>
         <link>https://valkyrie.bet/updates</link>
         <description>Valkyrie Blog</description>
-        <lastBuildDate>Tue, 20 Dec 2022 15:30:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 20 Jan 2023 15:30:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Release 0.5.1]]></title>
+            <link>https://valkyrie.bet/updates/2023/01/Release 0.5.1</link>
+            <guid>/2023/01/Release 0.5.1</guid>
+            <pubDate>Fri, 20 Jan 2023 15:30:00 GMT</pubDate>
+            <description><![CDATA[A few comments on the release]]></description>
+            <content:encoded><![CDATA[<p>New minor release is available!</p><p>The 0.5.1 contains a cpl of operational improvements and minor adjustments in the Caleta provider endpoint.</p><ul><li>Improved logging</li><li>Swagger doc generated in dev builds only, to reduce the footprint of production binary</li><li>Bet code and original bet timestamp added in the Caleta interface</li><li>Some adjustments to vplugin - Valkyrie's custom operator adapter</li></ul><p>More is on the way!</p>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[...annnd there it goes!]]></title>
             <link>https://valkyrie.bet/updates/2022/12/valkyrie</link>
@@ -34,14 +42,6 @@ Keep an eye on our <a href="https://valkyrie.bet/about" target="_blank" rel="noo
             <description><![CDATA[Valkyrie is now open source]]></description>
             <content:encoded><![CDATA[<p>Valkyrie is now open source and available to all.</p><p>A milestone reached in december 2022, having the project open sourced.
 Although limited use, hopefully this step will help our visibility and getting more Valkyrie instances running in 2023.</p>]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Release 0.5.1]]></title>
-            <link>https://valkyrie.bet/updates/2023/01/Release 0.5.1</link>
-            <guid>/2023/01/Release 0.5.1</guid>
-            <pubDate>Thu, 20 Jan 2022 15:30:00 GMT</pubDate>
-            <description><![CDATA[A few comments on the release]]></description>
-            <content:encoded><![CDATA[<p>New minor release is available!</p><p>The 0.5.1 contains a cpl of operational improvements and minor adjustments in the Caleta provider endpoint.</p><ul><li>Improved logging</li><li>Swagger doc generated in dev builds only, to reduce the footprint of production binary</li><li>Bet code and original bet timestamp added in the Caleta interface</li><li>Some adjustments to vplugin - Valkyrie's custom operator adapter</li></ul><p>More is on the way!</p>]]></content:encoded>
         </item>
     </channel>
 </rss>
