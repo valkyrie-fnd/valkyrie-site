@@ -43,4 +43,15 @@ Although limited use, hopefully this step will help our visibility and getting m
             <name>Gustav</name>
         </author>
     </entry>
+    <entry>
+        <title type="html"><![CDATA[Release 0.5.1]]></title>
+        <id>/2023/01/Release 0.5.1</id>
+        <link href="https://valkyrie.bet/updates/2023/01/Release 0.5.1"/>
+        <updated>2022-01-20T15:30:00.000Z</updated>
+        <summary type="html"><![CDATA[A few comments on the release]]></summary>
+        <content type="html"><![CDATA[<p>New minor release is available!</p><p>The 0.5.1 contains a cpl of operational improvements and minor adjustments in the Caleta provider endpoint.</p><ul><li>Improved logging</li><li>Swagger doc generated in dev builds only, to reduce the footprint of production binary</li><li>Bet code and original bet timestamp added in the Caleta interface</li><li>Some adjustments to vplugin - Valkyrie's custom operator adapter</li></ul><p>More is on the way!</p>]]></content>
+        <author>
+            <name>Klas</name>
+        </author>
+    </entry>
 </feed>
