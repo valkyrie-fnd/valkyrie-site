@@ -16,4 +16,4 @@ The 0.5.1 contains a cpl of operational improvements and minor adjustments in th
 * Bet code and original bet timestamp added in the Caleta interface
 * Some adjustments to vplugin - Valkyrie's custom operator adapter
 
-More to come within short!
+More is on the way!
