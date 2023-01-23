@@ -1,7 +1,7 @@
 ---
 title: Release 0.5.1
 description: A few comments on the release
-date: 2022-01-20T15:30
+date: 2023-01-20T15:30
 authors:
   - name: Klas
 ---
