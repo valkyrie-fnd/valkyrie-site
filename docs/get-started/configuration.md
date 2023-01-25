@@ -10,7 +10,7 @@ Supply a yaml config file when running Valkyrie. It contains config for logging 
 logging:
   level: info # debug, info, warn, error, fatal, panic
 tracing:
-  type: jaeger # stdout, jaeger, Zipkin, googleCloudTrace
+  type: jaeger # stdout, jaeger, googleCloudTrace
   url: 'http://traces-url'
   service_name: valkyrie
   google_project_id: ${TRACING_GOOGLE_PROJECT_ID} # if you're using googleCloudTrace
