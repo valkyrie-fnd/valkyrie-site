@@ -1,0 +1,38 @@
+---
+id: game-round-render
+title: "Render game round"
+description: "Optional. Returns a rendered representation of the specified game round."
+sidebar_label: "Render game round"
+hide_title: true
+hide_table_of_contents: true
+api: {"description":"Optional. Returns a rendered representation of the specified game round.","operationId":"GameRoundRender","parameters":[{"in":"path","name":"provider","required":true,"description":"Provider identification string. Depending on configured Valkyrie.","example":"caleta","schema":{"type":"string"}},{"in":"path","name":"gameRoundId","required":true,"description":"id of gameround to rendered","example":"xyz123","schema":{"type":"string"}}],"responses":{"302":{"description":"Redirect to provider specific url with rendered result"},"500":{"description":"Something went wrong fetching the rendered page"}},"method":"get","path":"/{provider}/gamerounds/{gameRoundId}/render","servers":[{"url":"http://localhost:8084","description":"operator server"}],"info":{"title":"Valkyrie Operator API","description":"Valkyrie endpoints for communicating with a provider. Exposed valkyrie endpoints can differ between configured provider modules. Make sure the ones you want to use are implemented.\n","version":"0.2.0","license":{"name":"MIT","url":"https://github.com/valkyrie-fnd/valkyrie/blob/main/LICENSE.md"}},"postman":{"name":"Render game round","description":{"content":"Optional. Returns a rendered representation of the specified game round.","type":"text/plain"},"url":{"path":[":provider","gamerounds",":gameRoundId","render"],"host":["{{baseUrl}}"],"query":[],"variable":[{"disabled":false,"description":{"content":"(Required) Provider identification string. Depending on configured Valkyrie.","type":"text/plain"},"type":"any","value":"","key":"provider"},{"disabled":false,"description":{"content":"(Required) id of gameround to rendered","type":"text/plain"},"type":"any","value":"","key":"gameRoundId"}]},"method":"GET"}}
+sidebar_class_name: "get api-method"
+info_path: docs/operator/valkyrie-operator-api
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import TabItem from "@theme/TabItem";
+
+## Render game round
+
+
+
+Optional. Returns a rendered representation of the specified game round.
+
+<details style={{"marginBottom":"1rem"}} data-collapsed={false} open={true}><summary style={{}}><strong>Path Parameters</strong></summary><div><ul><ParamsItem className={"paramsItem"} param={{"in":"path","name":"provider","required":true,"description":"Provider identification string. Depending on configured Valkyrie.","example":"caleta","schema":{"type":"string"}}}></ParamsItem><ParamsItem className={"paramsItem"} param={{"in":"path","name":"gameRoundId","required":true,"description":"id of gameround to rendered","example":"xyz123","schema":{"type":"string"}}}></ParamsItem></ul></div></details><div><ApiTabs><TabItem label={"302"} value={"302"}><div>
+
+Redirect to provider specific url with rendered result
+
+</div><div></div></TabItem><TabItem label={"500"} value={"500"}><div>
+
+Something went wrong fetching the rendered page
+
+</div><div></div></TabItem></ApiTabs></div>
+      
