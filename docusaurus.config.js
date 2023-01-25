@@ -56,9 +56,9 @@ const config = {
             specPath: "../valkyrie/pam/pam_api.yml",
             outputDir: "docs/wallet/valkyrie-pam",
           },
-          launch: {
+          operator: {
             specPath: "../valkyrie/provider/docs/operator_api.yml",
-            outputDir: "docs/gamelaunch",
+            outputDir: "docs/operator",
           },
         },
       },
