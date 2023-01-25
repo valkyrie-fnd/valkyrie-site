@@ -16,7 +16,6 @@ Simple metrics are available at http://localhost:8084/monitoring/metrics
 | Supported tracing exporters                          | Docs                                                                                    |
 |------------------------------------------------------|-----------------------------------------------------------------------------------------|
 | [Jaeger](https://www.jaegertracing.io/)              | [github](https://github.com/open-telemetry/opentelemetry-go/tree/main/exporters/jaeger) |
-| [Zipkin](https://zipkin.io/)                         | [github](https://github.com/open-telemetry/opentelemetry-go/tree/main/exporters/zipkin) |
 | [Google Cloud Trace](https://cloud.google.com/trace) | [github](https://github.com/GoogleCloudPlatform/opentelemetry-operations-go)            |
 
 ## Running locally with Jaeger for tracing
@@ -47,7 +46,7 @@ go tool pprof 'localhost:8084/debug/pprof/profile?seconds=25'
 logging:
   level: info # debug, info, warn, error, fatal, panic
 tracing:
-  type: jaeger # stdout, jaeger, Zipkin, googleCloudTrace
+  type: jaeger # stdout, jaeger, googleCloudTrace
   url: 'http://traces-url'
   service_name: valkyrie
   google_project_id: ${TRACING_GOOGLE_PROJECT_ID} # if you're using googleCloudTrace
