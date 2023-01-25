@@ -25,10 +25,13 @@ Red Tiger will provide the following configuration.
 - `api_key` - Api key available in the developer portal
 - `recon_token` - Reconciliation token used in some cases to resolve failed requests. Found in developer portal.
 
+`base_path` is used to differentiate between Valkyrie's exposed endpoints for the specific provider.
+
 ```yaml
 providers:
   - name: Red Tiger
     url: 'https://redtiger'
+    base_path: "/redtiger"
     auth:
       api_key: ${RED_TIGER_API_KEY}
       recon_token:  ${RECON_TOKEN}
