@@ -19,7 +19,8 @@ pam: # Player Account Management
   api_key: pam-api-key
   url: 'https://pam-url'
 provider_base_path: "/providers" # Optional field to set a base path to all requests incoming from provider side, ie wallet calls
-operator_base_path: "/operator" # Optional field to sat a base path to all requests incoming from operator side
+operator_base_path: "/operator" # Optional field to set a base path to all requests incoming from operator side
+operator_api_key: "token" # Optional, configures an api key used to authorize requests to operator endpoints (using `Authorization: Bearer token` header)
 providers:
   - name: providerName
     base_path: "/providername" # base path for the providers. Used to differentiate between Valkyrie's exposed endpoints for the specific providers.
