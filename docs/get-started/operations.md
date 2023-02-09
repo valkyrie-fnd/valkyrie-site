@@ -114,6 +114,8 @@ Outgoing traffic from Valkyrie is also HTTP-based and varies depending on which 
 SSL termination and load balancing concerns should be implemented outside the application through standard
 infrastructure components.
 
+Valkyrie provides an HTTP endpoint `GET /ping`, which can be used for load balancer monitoring etc.
+
 ### Scaling
 
 Valkyrie is built as a stateless component and is scalable both horizontally by running many instances of the
