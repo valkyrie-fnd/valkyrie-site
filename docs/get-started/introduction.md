@@ -8,20 +8,22 @@ sidebar_position: 0
 
 ## Installing
 
-Valkyrie is easily built from source by running:
+Valkyrie is built using [Go](https://go.dev/) and supports most platforms and architectures. 
+The application can be built from source by running:
 
 ```shell
-go mod download
 go build
 ```
 :::note
 Requires go 1.19 or later
 :::
-You can then simply run Valkyrie using:
+
+You can then run Valkyrie using:
 
 ```shell
 ./valkyrie -config path/to/config.yml
 ```
+
 This will open two ports: `:8083` and `:8084`. On port 8084 you will have a game launch endpoint.
 
 Port 8083 is open for the provider to communicate with Valkyrie, and Valkyrie will normalize the request to your specified PAM module.
