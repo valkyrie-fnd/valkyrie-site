@@ -34,6 +34,11 @@ logging:
     # compress: false                 # determines if the rotated log files should be compressed using gzip
 ```
 
+:::note
+Configuring Valkyrie with logging level `trace` or `debug` will produce very verbose logs and should be avoided
+in production environments.
+:::
+
 Providers may also support some form of tracing identifier, which is mapped to a field called `correlationID` by
 Valkyrie and propagated using HTTP header `X-Correlation-ID` as part of its standard PAM API.
 
