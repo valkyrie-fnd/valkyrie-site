@@ -8,7 +8,20 @@ sidebar_position: 1
 Supply a yaml config file when running Valkyrie. It contains config for logging and tracing as well as provider specific configuration. It's possible to add environment variables within `${}`, which will be replaced before the yaml is processed.
 ```yaml
 logging:
-  level: info # debug, info, warn, error, fatal, panic
+  level: info # trace, debug, info, warn, error, fatal, panic (info being default)
+  async: # Optional async configuration (enabled by default, with default values)
+    enabled: true
+    buffer_size: 500000 # Log buffer will be emptied when full to avoid blocking producers
+    poll_interval: 5ms # Time duration between the log writer polling for new events
+  output:
+    type: stdout # Supported types: stdout, stderr, file
+    # for type=file, the following config is available:
+    # filename: /var/log/valkyrie.log # is the file to write logs to
+    # max_size: 100                   # the maximum size in megabytes of the log file before it gets rotated
+    # max_age: 28                     # the maximum number of days to retain old log files based on the
+    #                                 # timestamp encoded in their filename
+    # max_backups: 3                  # the maximum number of old log files to retain
+    # compress: false                 # determines if the rotated log files should be compressed using gzip
 tracing:
   type: jaeger # stdout, jaeger, googleCloudTrace
   url: 'http://traces-url'
