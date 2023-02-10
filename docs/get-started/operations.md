@@ -35,7 +35,7 @@ logging:
 ```
 
 Providers may also support some form of tracing identifier, which is mapped to a field called `correlationID` by
-Valkyrie and propagated using HTTP header `X-Correlation-ID"` as part of its standard PAM API.
+Valkyrie and propagated using HTTP header `X-Correlation-ID` as part of its standard PAM API.
 
 ## Telemetry
 
