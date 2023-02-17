@@ -4,10 +4,18 @@
         <title>Valkyrie Blog</title>
         <link>https://valkyrie.bet/updates</link>
         <description>Valkyrie Blog</description>
-        <lastBuildDate>Fri, 20 Jan 2023 15:30:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 17 Feb 2023 15:30:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Release 0.6.0]]></title>
+            <link>https://valkyrie.bet/updates/2023/01/Release 0.6.0</link>
+            <guid>/2023/01/Release 0.6.0</guid>
+            <pubDate>Fri, 17 Feb 2023 15:30:00 GMT</pubDate>
+            <description><![CDATA[A little intro to the new release]]></description>
+            <content:encoded><![CDATA[<p>Yet another minor release is available!</p><p>The 0.6.0 release contains configuration options for providers and operators. In addition two new Caleta provider endpoints supporting "mixed settlements" and game rendering.</p><ul><li>Provider configs</li><li>Operator configs</li><li>Caleta game rendering endpoint for back office use</li><li>Caleta endpoint for obtaining bets included in a game round. For mixed settlement purposes</li><li>Some operational improvements</li><li>Example implementation for a new provider</li></ul><p>Check out the release notes <a href="https://github.com/valkyrie-fnd/valkyrie/releases/tag/v0.6.0" target="_blank" rel="noopener noreferrer">here</a></p><p>Stay tuned - more is around the corner!</p>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Release 0.5.1]]></title>
             <link>https://valkyrie.bet/updates/2023/01/Release 0.5.1</link>
