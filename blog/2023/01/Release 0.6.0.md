@@ -9,7 +9,7 @@ authors:
 Yet another minor release is available!
 <!--truncate-->
 
-The 0.6.0 contains configuration options for providers and operators. In addition two new Caleta provider endpoints supporting "mixed settlements" and game rendering.
+The 0.6.0 release contains configuration options for providers and operators. In addition two new Caleta provider endpoints supporting "mixed settlements" and game rendering.
 
 * Provider configs
 * Operator configs
