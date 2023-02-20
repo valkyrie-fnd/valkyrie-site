@@ -15,10 +15,10 @@ At present, two Valkyrie support components - the *valkyrie-stubs* and *valkyrie
 The valkyrie-stubs component simulates a standard gaming operator wallet implementing the standard API described in this site, while the valkyrie-event-adapter component offers some game client interaction support.
 
 ## Gaming Operator
-If you're an operator you simply integrate the Valkyrie wallet server described [here](https://valkyrie.bet/docs/wallet/valkyrie-pam-api) and get access to all game providers already integrated with Valkyrie. It's possible to create proprietary integrations to your wallet server as well using the vPlugin mechanism.
+If you're an operator you simply integrate the Valkyrie wallet server described [here](https://valkyrie.bet/docs/wallet/valkyrie-pam/valkyrie-pam-api) and get access to all game providers already integrated with Valkyrie. It's possible to create proprietary integrations to your wallet server as well using the vPlugin mechanism.
 
 ## Game Provider
-For providers Valkyrie offers direct exposure to gaming operators for free. All you need to do to offer your products to operators connected to Valkyrie is to make sure your RGS integrates with Valkyrie [provider API](https://valkyrie.bet/docs/providerApis/valkyrie-provider-api) by implementing (or have somebody doing it) an RGS specific Valkyrie module. In addition, there are iGaming aggregators who already support Valkyrie integration, so if you prefer exposure via an aggregator, this might also be an option. New provider Valkyrie integrations will join the present ones in an open source GitHub repo.
+For providers Valkyrie offers direct exposure to gaming operators for free. All you need to do to offer your products to operators connected to Valkyrie is to make sure your RGS integrates with Valkyrie [provider API](https://valkyrie.bet/docs/) by implementing (or have somebody doing it) an RGS specific Valkyrie module. In addition, there are iGaming aggregators who already support Valkyrie integration, so if you prefer exposure via an aggregator, this might also be an option. New provider Valkyrie integrations will join the present ones in an open source GitHub repo.
 
 ## Aggregator
 Aggregators, keen on easy plug'n spin connections to operators as well as providers, may find the Valkyrie components useful too. Integrations to aggregator platforms are easily implemented using Valkyrie standardized wallet as well as customized provider APIs.
