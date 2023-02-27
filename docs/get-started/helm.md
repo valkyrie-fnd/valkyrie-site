@@ -135,6 +135,29 @@ config:
         api_key: ${SOME_PROVIDER_API_TOKEN}
 ```
 
+#### OpenTelemetry Collector
+
+The Valkyrie Helm chart can be configured to run [OpenTelemetry Collector](https://opentelemetry.io/docs/collector/)
+as a sidecar container within the Valkyrie pod.
+
+```yaml
+otel:
+  enabled: true # enable otel-collector sidecar
+  config:       # supply otel-collector-specific configuration below
+    receivers:
+      # ...
+    exporters:
+      # ...
+    processors:
+      # ...
+    service:
+      # ...
+```
+
+Documentation for how to configure OpenTelemetry Collector can be found in its [official documentation](https://opentelemetry.io/docs/collector/configuration/).
+
+Valkyrie also has working configuration examples in its [repository](https://github.com/valkyrie-fnd/valkyrie/tree/main/ops/otel).
+
 ### Cloud provider configuration
 
 In order to provide external access to the valkyrie service a few things will be needed which are

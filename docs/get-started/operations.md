@@ -49,40 +49,86 @@ needs, which allows for easy integration with most standard observability backen
 
 ### Tracing
 
-| Supported tracing exporters                          | Docs                                                                                    |
-|------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| [Jaeger](https://www.jaegertracing.io/)              | [github](https://github.com/open-telemetry/opentelemetry-go/tree/main/exporters/jaeger) |
-| [Google Cloud Trace](https://cloud.google.com/trace) | [github](https://github.com/GoogleCloudPlatform/opentelemetry-operations-go)            |
+| Supported tracing exporters                                         | Docs                                                                                    |
+|---------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| [OpenTelemetry Collector](https://opentelemetry.io/docs/collector/) | [github](https://github.com/open-telemetry/opentelemetry-collector-contrib)             |
+| StdOut                                                              | [github](https://github.com/open-telemetry/opentelemetry-go/tree/main/exporters/stdout) |
 
-Tracing is configured in Valkyrie's standard config file and supports the following options: 
+Tracing is configured in Valkyrie's standard config file under `telemetry` and supports the following options: 
 
 ```yaml
-tracing:
-  type: jaeger # stdout, jaeger, googleCloudTrace
-  url: 'http://traces-url'
-  service_name: valkyrie
-  google_project_id: ${TRACING_GOOGLE_PROJECT_ID} # if you're using googleCloudTrace
+telemetry:
+  tracing:
+    type: otlphttptrace                             # supported: stdout, otlptracehttp
+    url: "http://traces-url"                        # optional, otlphttptrace will default to "http://localhost:4318/v1/traces"
+    google_project_id: ${TRACING_GOOGLE_PROJECT_ID} # optional, applicable if you're using google cloud
+    sample_ratio: 0.1                               # optional, default samples 1% of traces
 ```
 
-#### Running locally with Jaeger for tracing
-1. Start Jaeger in docker
-    ```bash
-    docker run -d --name jaeger \
-      -e COLLECTOR_ZIPKIN_HOST_PORT=:9411 \
-      -p 5775:5775/udp -p 6831:6831/udp -p 6832:6832/udp -p 5778:5778 -p 16686:16686 \
-      -p 14250:14250 -p 14268:14268 -p 14269:14269 -p 9411:9411 \
-      jaegertracing/all-in-one:1.35
-    ```
-2. Set environment variables for Valkyrie.
-    ```bash
-    TRACING_TYPE=jaeger
-    TRACING_URL=http://localhost:14268/api/traces
-    TRACING_SERVICE_NAME=valkyrie
-    ```
+* `otlphttptrace` configures exporting over [OLTP/HTTP](https://opentelemetry.io/docs/reference/specification/protocol/) to an OpenTelemetry Collector
+* `stdout` configures printing of traces to standard out
+
+OpenTelemetry Collector can then be configured with the following [exporters](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/exporter).
+
+#### Running locally with OpenTelemetry Collector and Jaeger for tracing
+
+1. Valkyrie provides a sample `docker-compose-local.yaml` for starting a local OpenTelemetry Collector and Jaeger: https://github.com/valkyrie-fnd/valkyrie/tree/main/ops/otel
+2. Start Valkyrie locally and configure trace exporting with `otlphttptrace`:
+   ```yaml
+   telemetry:
+     service_name: sample-valkyrie
+     tracing:
+       type: otlphttptrace
+       sample_ratio: 1.0
+   ```
+   The exporter will by default send traces to OpenTelemetry Collector on `http://localhost:4318/v1/traces` that is running in docker.
+3. Trigger a traced wallet call and inspect it in Jaeger on `http://localhost:16686`
 
 ### Metrics
 
-Simple metrics are available at http://localhost:8084/monitoring/metrics.
+Simple application metrics are available at http://localhost:8084/monitoring/metrics and contains:
+
+* CPU usage
+* Memory usage
+* Response time
+* Open connections
+
+More advanced metrics (including above) can be exported by Valkyrie. This includes metrics for:
+
+* HTTP server
+* GC statistics
+* Memory statistics
+* Uptime
+
+| Supported metric exporters                                          | Docs                                                                                    |
+|---------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| [OpenTelemetry Collector](https://opentelemetry.io/docs/collector/) | [github](https://github.com/open-telemetry/opentelemetry-collector-contrib)             |
+| StdOut                                                              | [github](https://github.com/open-telemetry/opentelemetry-go/tree/main/exporters/stdout) |
+
+Metrics are configured in Valkyrie's standard config file under `telemetry` and supports the following options:
+
+```yaml
+telemetry:
+  metric:
+    type: otlpmetrichttp      # supported: stdout, otlpmetrichttp
+    url: "http://metrics-url" # optional, otlpmetrichttp will default to "http://localhost:4318/v1/metrics"
+```
+
+* `otlpmetrichttp` configures exporting over [OLTP/HTTP](https://opentelemetry.io/docs/reference/specification/protocol/) to an OpenTelemetry Collector
+* `stdout` configures printing of metrics to standard out
+
+#### Running locally with OpenTelemetry Collector and Prometheus for metrics
+
+1. Valkyrie provides a sample `docker-compose-local.yaml` for starting a local OpenTelemetry Collector and Prometheus: https://github.com/valkyrie-fnd/valkyrie/tree/main/ops/otel
+2. Start Valkyrie locally and configure metric exporting with `otlpmetrichttp`:
+   ```yaml
+   telemetry:
+     service_name: sample-valkyrie
+     metric:
+       type: otlpmetrichttp
+   ```
+   The exporter will by default send metrics to OpenTelemetry Collector on `http://localhost:4318/v1/metrics` that is running in docker.
+3. Inspect the metrics in Prometheus on `http://localhost:9090`
 
 ## Profiling
 
