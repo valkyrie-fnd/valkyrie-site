@@ -22,11 +22,17 @@ logging:
     #                                 # timestamp encoded in their filename
     # max_backups: 3                  # the maximum number of old log files to retain
     # compress: false                 # determines if the rotated log files should be compressed using gzip
-tracing:
-  type: jaeger # stdout, jaeger, googleCloudTrace
-  url: 'http://traces-url'
-  service_name: valkyrie
-  google_project_id: ${TRACING_GOOGLE_PROJECT_ID} # if you're using googleCloudTrace
+telemetry:
+  service_name: serviceName # adds name metadata to tracing and metric telemetry
+  namespace: namespace      # adds namespace metadata to tracing and metric telemetry
+  tracing:
+    type: stdout                        # supported: stdout, otlptracehttp
+    # url: "https://tracing-server-url" # optional, otlphttptrace will default to "http://localhost:4318/v1/traces"
+    # google_project_id: xyz            # optional, applicable if you're using google cloud
+    # sample_ratio: 0.01                # optional, default samples 1% of traces
+  metric:
+    type: stdout                       # supported: stdout, otlpmetrichttp
+    # url: "https://metric-server-url" # optional, otlpmetrichttp will default to "http://localhost:4318/v1/metrics"
 pam: # Player Account Management
   name: generic
   api_key: pam-api-key
