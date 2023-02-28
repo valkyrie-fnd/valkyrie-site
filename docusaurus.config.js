@@ -92,6 +92,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      metadata: [{name: 'keywords', content: 'valkyrie, open source, igaming, aggregator, provider, operator'}],
       navbar: {
         logo: {
           alt: "valkyrie logo",
@@ -167,7 +168,6 @@ const config = {
     }),
   stylesheets: ["https://fonts.googleapis.com/css2?family=Bai+Jamjuree"],
   themes: ["docusaurus-theme-openapi-docs"],
-  metadata: [{name: 'keywords', content: 'valkyrie, open source, igaming, aggregator, provider, operator'}],
 };
 
 module.exports = config;
