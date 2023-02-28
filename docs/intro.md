@@ -8,7 +8,7 @@ slug: /
 # Intro
 
 ## Valkyrie Game Aggregator
-Valkyrie software is distributed freely on [GitHub](https://github.com/valkyrie-fnd/valkyrie). 
+Valkyrie software is distributed freely on [GitHub](https://github.com/valkyrie-fnd/valkyrie) under MIT license. 
 
 The software can be downloaded as either a Go binary, container image or you can clone the repo and build yourself.
 

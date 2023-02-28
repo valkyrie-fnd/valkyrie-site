@@ -3,7 +3,7 @@ const baseUrl = "/";
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Valkyrie",
-  tagline: "Open sourcing gaming",
+  tagline: "Open sourcing iGaming Aggregators",
   url: "https://valkyrie.bet/",
   baseUrl: baseUrl,
   onBrokenLinks: "throw",
@@ -78,7 +78,7 @@ const config = {
         },
         blog: {
           routeBasePath: "updates",
-          blogTitle: "Valkyrie blog!",
+          blogTitle: "Updates",
           blogDescription: "Info on what's on",
           postsPerPage: "ALL",
         },
@@ -167,6 +167,7 @@ const config = {
     }),
   stylesheets: ["https://fonts.googleapis.com/css2?family=Bai+Jamjuree"],
   themes: ["docusaurus-theme-openapi-docs"],
+  metadata: [{name: 'keywords', content: 'valkyrie, open source, igaming, aggregator, provider, operator'}],
 };
 
 module.exports = config;

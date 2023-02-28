@@ -5,7 +5,31 @@ sidebar_position: 1
 ---
 
 ## Valkyrie Config
-Supply a yaml config file when running Valkyrie. It contains config for logging and tracing as well as provider specific configuration. It's possible to add environment variables within `${}`, which will be replaced before the yaml is processed.
+
+Valkyrie is configured by supplying a yaml config file as a command line argument. 
+
+```bash
+./valkyrie -config path/to/config.yml
+```
+
+The configuration file contains all necessary configuration for Valkyrie, including: 
+* Provider configuration
+* PAM configuration
+* Logging
+* Telemetry
+* HTTP Server and Client
+
+It's possible to add environment variables within `${}`, which will be replaced before the yaml is processed.
+For example:
+
+```yaml
+pam:
+  name: generic
+  api_key: "${PAM_API_TOKEN}"
+```
+
+A full reference of the supported configuration is listed below:
+
 ```yaml
 logging:
   level: info # trace, debug, info, warn, error, fatal, panic (info being default)
@@ -59,4 +83,9 @@ http_client: # optional http client configuration
   request_timeout: 1s
 ```
 
-For a full list of available providers please look [here](/providers). Each provider specifies what configuration is needed.
+:::note
+Different providers and PAMs (Wallets) may require additional custom configuration to be provided.
+
+For a full list of available providers please refer to the [providers section](/providers).
+Similarly, for PAMs please refer to the Wallet section.
+:::
