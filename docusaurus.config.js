@@ -3,7 +3,7 @@ const baseUrl = "/";
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Valkyrie",
-  tagline: "Open sourcing gaming",
+  tagline: "Open sourcing iGaming Aggregators",
   url: "https://valkyrie.bet/",
   baseUrl: baseUrl,
   onBrokenLinks: "throw",
@@ -78,7 +78,7 @@ const config = {
         },
         blog: {
           routeBasePath: "updates",
-          blogTitle: "Valkyrie blog!",
+          blogTitle: "Updates",
           blogDescription: "Info on what's on",
           postsPerPage: "ALL",
         },
@@ -92,6 +92,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      metadata: [{name: 'keywords', content: 'valkyrie, open source, igaming, aggregator, provider, operator'}],
       navbar: {
         logo: {
           alt: "valkyrie logo",

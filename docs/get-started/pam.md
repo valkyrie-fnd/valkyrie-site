@@ -1,7 +1,7 @@
 ---
 title: Player Account Management
 description: A PAM is the system the operator uses to keep track of the players' accounts and balances. Also referred to as wallet.
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 ## PAM
