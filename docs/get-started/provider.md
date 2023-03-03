@@ -1,7 +1,7 @@
 ---
 title: Provider implementation
 description: Guideline on how to add a new provider to Valkyrie 
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 ## Basics
