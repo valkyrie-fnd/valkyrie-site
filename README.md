@@ -31,7 +31,6 @@ yarn gen-api-docs
 ```
 These commands generates md documentation for openapi specifications. Requires Valkyrie to be present on the system
 
-
 ```
 yarn gen-provider-docs
 ```
